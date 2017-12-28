@@ -1,0 +1,144 @@
+.reg {
+  width: 100%;
+  height: 673px;
+  background: url(../images/register/banner.jpg) no-repeat center; }
+  .reg .box {
+    width: 1240px;
+    height: 515px; }
+    .reg .box .register {
+      width: 395px;
+      height: 515px;
+      background: #fafafa;
+      padding-top: 40px;
+      font-size: 14px;
+      color: #000;
+      float: right;
+      position: relative; }
+      .reg .box .register .register_nav {
+        display: table;
+        position: relative;
+        margin: 0 auto;
+        height: 60px; }
+        .reg .box .register .register_nav .reminder {
+          color: #EB2D47;
+          font-size: 12px;
+          display: none;
+          text-align: left;
+          width: 250px;
+          height: 22px;
+          line-height: 22px;
+          padding-left: 16px;
+          background: url(http://www.roseonly.com.cn/assets/roseonly/images/warning.png) no-repeat left center; }
+        .reg .box .register .register_nav span {
+          position: absolute;
+          line-height: 25px;
+          height: 25px;
+          vertical-align: middle;
+          right: 0;
+          top: 0; }
+        .reg .box .register .register_nav .register_nav_86 {
+          width: 50px;
+          line-height: 45px;
+          border-right: solid 1px #b3b3b3;
+          position: absolute;
+          left: 0;
+          top: 0;
+          text-align: center; }
+        .reg .box .register .register_nav .register_yzm {
+          width: 290px;
+          border: solid 1px #b3b3b3;
+          -moz-border: solid 1px #b3b3b3;
+          -o-border: solid 1px #b3b3b3;
+          -weikit-border: solid 1px #b3b3b3;
+          position: relative;
+          font-size: 14px;
+          padding: 14px 0 14px 10px;
+          margin-top: 0px;
+          box-sizing: border-box; }
+        .reg .box .register .register_nav .register_yzmimg {
+          display: table-cell;
+          width: 50px;
+          height: 47px;
+          vertical-align: middle;
+          margin: 0;
+          padding: 0;
+          position: absolute;
+          right: 0;
+          top: 0;
+          background: #c6c6c6; }
+          .reg .box .register .register_nav .register_yzmimg #yzm {
+            line-height: 47px;
+            padding-right: 10px; }
+        .reg .box .register .register_nav .indent {
+          text-indent: 0;
+          height: 45px; }
+        .reg .box .register .register_nav .register_text {
+          width: 290px;
+          text-indent: 50px;
+          border: solid 1px #b3b3b3;
+          font-size: 14px;
+          padding: 13px 0 14px 10px;
+          position: relative;
+          margin-top: 0px;
+          box-sizing: border-box; }
+      .reg .box .register .sms_button a {
+        width: 100px;
+        height: 46px;
+        line-height: 46px;
+        display: block;
+        text-align: center;
+        color: #000;
+        background: #d2d2d2; }
+      .reg .box .register .register_yzmnext {
+        color: #83847e;
+        font-size: 12px;
+        display: table-cell;
+        vertical-align: middle;
+        float: right;
+        height: 30px;
+        line-height: 30px;
+        margin-right: 50px;
+        display: inline;
+        position: absolute;
+        right: -93px;
+        top: 175px;
+        top: 7px; }
+      .reg .box .register .register_p {
+        width: 290px;
+        height: 40px;
+        margin: 0 auto;
+        line-height: 40px; }
+        .reg .box .register .register_p .register_yyzh {
+          margin: 0;
+          float: right; }
+      .reg .box .register .register_nav .register_password,
+      .reg .box .register .signin_nav .register_password {
+        width: 290px;
+        border: solid 1px #b3b3b3;
+        font-size: 14px;
+        padding: 14px 0 14px 10px;
+        box-sizing: border-box; }
+      .reg .box .register .register_button {
+        width: 290px;
+        margin: 0px auto; }
+      .reg .box .register .register_button a {
+        width: 290px;
+        height: 45px;
+        line-height: 45px;
+        display: block;
+        text-align: center;
+        color: #fff;
+        font-size: 16px;
+        letter-spacing: 2px; }
+      .reg .box .register .background2 {
+        background: #c6c6c6; }
+      .reg .box .register .register_bottom {
+        width: 365px;
+        height: 58px;
+        background: #c6c6c6 url(../images/register/shop.png) no-repeat 40px 10px;
+        text-align: center;
+        line-height: 58px;
+        font-size: 16px;
+        position: absolute;
+        bottom: 0;
+        padding-left: 30px; }
