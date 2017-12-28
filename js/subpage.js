@@ -34,10 +34,10 @@ $(function() {
 					arr =  str.replace("￥","");
 //					console.log(arr);
 					for( var j = 0 ; j < arr.length; j++ ){
-						newArr = parseInt(arr)
+						alert(newArr instanceof Array)
+//						newArr.sort(function(a,b){return a - b;})
+//						console.log(newArr)
 					}
-					console.log( newArr);
-//					console.log(newArr.sort(function(a,b){return a - b;}))
 				}
 //				console.log( arr.push(parseInt(str.push(`${value.price}`)) ) )
 			});
