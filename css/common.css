@@ -147,6 +147,9 @@ header {
           float: left;
           padding: 0 63px;
           padding-top: 25px; }
+          #nav_cn #nav li .down_01 .list_a a, #nav_cn #nav li .down_02 .list_a a, #nav_cn #nav li .down_03 .list_a a, #nav_cn #nav li .down_04 .list_a a, #nav_cn #nav li .down_05 .list_a a, #nav_cn #nav li .down_06 .list_a a {
+            display: block;
+            line-height: 35px; }
         #nav_cn #nav li .down_01 h2, #nav_cn #nav li .down_02 h2, #nav_cn #nav li .down_03 h2, #nav_cn #nav li .down_04 h2, #nav_cn #nav li .down_05 h2, #nav_cn #nav li .down_06 h2 {
           font-size: 14px;
           font-weight: 900;

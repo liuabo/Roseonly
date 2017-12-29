@@ -34,13 +34,21 @@ $(function() {
 					arr =  str.replace("￥","");
 //					console.log(arr);
 					for( var j = 0 ; j < arr.length; j++ ){
-						alert(newArr instanceof Array)
+//						alert(newArr instanceof Array)
 //						newArr.sort(function(a,b){return a - b;})
 //						console.log(newArr)
 					}
 				}
 //				console.log( arr.push(parseInt(str.push(`${value.price}`)) ) )
 			});
+		})
+	
+	
+	
+		/**********点击跳转***********/
+		var timer = null;
+		$(".sub").find("li:first").click(function(){
+			location.href = "../detail/detail.html"
 		})
 	})
 })
