@@ -89,13 +89,14 @@ header {
             }
         }
         .head-right {
-            width: 226px;
+            width: 252px;
             height: 35px;
             float: right;
             li {
                 float: left;
                 width: 44px;
                 height: 35px;
+                cursor: pointer;
                 a {
                     line-height: 35px;
                     border-right: 1px solid #ccc;
@@ -120,7 +121,13 @@ header {
                 font-weight: 900;
             }
             li:nth-of-type(3) {
+                line-height:34px;
+                width:66px;
                 font-weight: 100;
+                span{
+                    position: relative;
+                    top: -5px;
+                }
             }
             li:last-child {
                 width: 80px;
@@ -243,17 +250,24 @@ header {
         }
     }
     .nav_05 {
-        width: 124px;
+        width: 140px;
         height: 30px;
         position: absolute;
         top: 7px;
         right: 10px;
         z-index: 3001;
         font-size:14px;
-        .list_03{
-                    position: relative;
-                    top:-3px;
-                }
+    .list_03{
+        width:58px;
+        color: #fff;
+            a{
+                display: inline-block;
+                width:58px;
+                position: relative;
+                top:-2px;
+                color: #fff;
+            }
+        }
         h4 {
             float: left;
             width: 40px;

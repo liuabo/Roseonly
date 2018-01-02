@@ -10,6 +10,8 @@
 		<link rel="stylesheet" type="text/css" href="../css/common.css" />
 		<link rel="stylesheet" type="text/css" href="../css/detail.css" />
 		<script type="text/javascript" src="../js/jquery-1.11.1.js"></script>
+		<script type="text/javascript" src="../js/jquery.cookie.js" ></script>
+		<script type="text/javascript" src="../js/jquery.fly.js" ></script>
 		<script type="text/javascript" src="../js/common.js"></script>
 		<script type="text/javascript" src="../js/index.js"></script>
 		<script type="text/javascript" src="../js/detail.js"></script>
@@ -49,7 +51,7 @@
 						<li>
 							<a href="javascript:;">注册</a>
 						</li>
-						<li>
+						<li id="buy">
 							<a href="javascript:;"><i class="iconfont icon-gouwuche"></i><span>(0)</span></a>
 						</li>
 						<li>
@@ -347,15 +349,15 @@
 					</div>
 					<div class="details_num1_right">
 						<div class="details_ num1_right">
-							<div class="right_tit">星座经典 - 摩羯座单朵摩羯守护色 &nbsp;Mini音乐球</div>
+							<div class="right_tit">星座经典 - 摩羯座单朵摩羯守护色  Mini音乐球</div>
 							<div class="right_xxc">1011030004</div>
-							<div class="right_pay"><span>价格 :</span> ￥1314.0
+							<div class="right_pay"><span>价格 : <b style="font-size: 24px;display: inline-block;width:20px;height:20px;">￥</b></span> <em style="margin-left: 15px;">1314.0</em>
 							</div>
 							<!--产品筛选-->
 							<div class="right_select">
 								<span class="right_font_tit">颜色：</span>
 								<div class="p-choose choose-color ">
-									<img class="select_color selected " src="../images/detail/x1.png" data-attrid="221" title="摩羯守护色 ">
+									<img data-good-id="sp1" class="select_color selected " src="../images/detail/x1.png" data-attrid="221" title="摩羯守护色 ">
 									<img class="select_color se_01" src="../images/detail/x2.png" data-attrid="245" title="嫣红">
 								</div>
 							</div>
@@ -371,7 +373,7 @@
 								<div class="clear"></div>
 							</div>
 
-							<a href="javascript:tobuy(3072);" class="button_bar1 unsold" name="for99clickToBuy">立即购买</a>
+							<a href="../site/site.html" class="button_bar1 unsold" name="for99clickToBuy">立即购买</a>
 							<a href="javascript:tocart(3072);" class="button_bar2 unsold" name="for99clickToCar">加入购物车</a>
 							<a href="javascript:;" class="button_bar1" id="soldText" style="display:none"></a>
 
@@ -401,7 +403,7 @@
 					</div>
 					<div class="div_04 tc">
 						<div class="font">组合价：<span>¥2628</span><br>价值：¥2628</div>
-						<a href="javascript:buyGroup(536);" class="button">立即购买</a>
+						<a href="../site/site.html" class="button">立即购买</a>
 					</div>
 				</div>
 
