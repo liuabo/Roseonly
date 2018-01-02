@@ -1,0 +1,424 @@
+@charset "utf-8";
+#con{
+    .container {
+        width: 1240px;
+        margin: 0px auto 0;
+        .nav-container {
+            position: relative;
+            background: #414141;
+            height:6px;
+            width: 100%;
+            min-width: 1240px;
+        }
+        .shopping {
+            width: 962px;
+            margin: 0 auto;
+            font-size: 14px;
+            .order-nav {
+                height: 70px;
+                line-height: 100px;
+                font-size: 22px;
+                color: #414141;
+                text-align: center;
+            }
+            .order-left {
+                width: 960px;
+                .per-nav {
+                        height: 32px;
+                        line-height: 30px;
+                        font-weight: bolder;
+                        font-size: 16px;
+                        border-bottom: solid 1px #414141;
+                    }
+                .order-per {
+                    width: 960px;
+                    .mb10 {
+                        line-height: 30px;
+                        margin-bottom: 10px;
+                        margin-top: 15px;
+                        td {
+                            position: relative;
+                            #address_id_0 {
+                                position: absolute;
+                                margin: 0;
+                                padding: 0;
+                                left: 9px;
+                                top: 9px;
+                            }
+                        }
+                    }
+                }
+                .hide {
+                    width: 903px;
+                    height: 200px;
+                    margin-left: 30px;
+                    margin-top: 20px;
+                    font-size: 14px;
+                    display: none;
+                    color: #414141;
+                    .contactname_input {
+                        background-color: #fff;
+                        width: 217px;
+                        height: 35px;
+                        border: solid 1px #b4b4b4;
+                    }
+                    #privince, #city, #area {
+                        background-color: #fff;
+                        width: 145px;
+                        height: 35px;
+                        border: solid 1px #b4b4b4;
+                    }
+                    .contactname_input2 {
+                        background-color: #fff;
+                        width: 475px;
+                        height: 35px;
+                        border: solid 1px #b4b4b4;
+                    }
+                    tr {
+                        height: 55px;
+                    }
+                    .address_zip_div_class {
+                        height: 200px;
+                        display: block;
+                        border: sliod 1px red;
+                        margin-top: 142px;
+                        width: 600px;
+                        margin-left: 92px;
+                    }
+                    .address-box {
+                        width: 488px;
+                        height: 166px;
+                        border: solid 1px #414141;
+                        position: absolute;
+                        margin-top: 5px;
+                        margin-left: 155px;
+//                      !margin-left: -285px;
+                        font-size: 12px;
+                        display: none;
+                        background: #fff;
+                    }
+                    .save {
+                        width: 142px;
+                        height: 37px;
+                        cursor: pointer;
+                        line-height: 37px;
+                        background: #414141;
+                        color: #fff;
+                        text-align: center;
+                        display: block;
+                        float: right;
+                        margin: 10px 0 0 0;
+                    }
+                    .cancel {
+                        width: 142px;
+                        height: 37px;
+                        line-height: 37px;
+                        background: #d9d9d9;
+                        color: #000;
+                        text-align: center;
+                        display: block;
+                        float: right;
+                        margin: 10px 10px 0 0;
+                    }
+                }
+                .order-del {
+                    width: 960px;
+                    margin-top: 50px;
+                    #address_paytype{
+                        .per-nav {
+                            height: 32px;
+                            line-height: 30px;
+                            font-weight: bolder;
+                            font-size: 16px;
+                            border-bottom: solid 1px #414141;
+                            .btn_update {
+                                float: right;
+                                font-size: 14px;
+                                color: #38a6c2;
+                                a {
+                                    color: #38a6c2;
+                                }
+                            }
+                            #bc {
+                                font-size: 14px;
+                                margin-top: 10px;
+                                display: block;
+                                padding: 0 10px;
+                                line-height: 25px;
+                            }
+                        }
+                    }
+                    #ab {
+                        line-height: 30px;
+                        div{
+                            .payment {
+                                width: 70px;
+                                float: left;
+                            }
+                        }
+                        .h30 {
+                            height: 30px;
+                            line-height: 30px;
+                            .wwf {
+                                float: left;
+                                margin-right: 20px;
+                            }
+                            .cor-2 {
+                                color: #414141;
+                            }
+                            .pay_ysf {
+                                float: left;
+                                font-size: 12px;
+                                color: #83847e;
+                            }
+                        }
+                        #span_ziti{
+                            .wfm {
+                                width: 100px;
+                                float: left;
+                                display: block;
+                                margin-left: 64px;
+                            }
+                        }
+                    }
+                }
+                .order-other {
+                    padding-top: 50px;
+//                  !padding-top: 10px;
+                    font-size: 14px;
+                    td{
+                        #couponno {
+                            width: 215px;
+                            height: 35px;
+                            line-height: 35px;
+                        }
+                        #button_btn {
+                            width: 55px;
+                            height: 35px;
+                            line-height: 35px;
+                            background: #414141;
+                            border: none;
+                            cursor: pointer;
+                            color: #fff;
+                        }
+                        .pay_total {
+                            line-height: 30px;
+                            font-weight: bolder;
+                            color: #414141;
+                        }
+                    }
+                    .commodity-list {
+                        width: 960px;
+                        min-height: 120px;
+                        font-size: 12px;
+                        margin-bottom: 25px;
+                        padding-top: 35px;
+                        .product-img {
+                            width: 100px;
+                            height: 100px;
+                            display: block;
+                            float: left;
+                            cursor: pointer;
+                        }
+                        .commodity-list-left {
+                            width: 260px;
+                            float: left;
+                            height: 125px;
+                            line-height: 30px;
+                            margin: 0px 25px 0 20px;
+                            border-right: solid 1px #83847e;
+                            float: left;
+                            padding-right: 15px;
+                            box-sizing: border-box;
+                            .fl {
+                                float: left;
+                                .list-color2 {
+                                    height: 30px;
+                                    color: #414141;
+                                    display: block;
+                                    float: left;
+                                }
+                                .pay_normal {
+                                    float: left;
+                                    width: 180px;
+                                    line-height: 20px;
+                                    padding-top: 5px;
+                                    color: #414141;
+                                }
+                            }
+                        }
+                        .commodity-list-right {
+                            width: 550px;
+                            height: 125px;
+                            line-height: 30px;
+                            margin-top: 5px;
+                            float: left;
+//                          position: relative;
+                            .list_tlabel {
+                                width: 75px;
+                                text-align: right;
+                            }
+                            .list-color2 {
+                                height: 30px;
+                                color: #414141;
+                                display: block;
+                                float: left;
+                            }
+                            .list_tlabel {
+                                    width: 75px;
+                                    text-align: right;
+                            }
+                            .add_wj {
+                                line-height: normal;
+                                float: none;
+                                display: table-cell;
+                                vertical-align: middle;
+                                width: 480px;
+                            }
+                        .list_tlabel {
+                                width: 75px;
+                                text-align: right;
+                                .red {
+                                    color: red;
+                                }
+                                .list-color2 {
+                                    color: #414141;
+                                }
+                            }
+                            .pay_day {
+                                position: relative;
+                                width: 220px;
+                                height: 35px;
+                                float: left;
+                                cursor: pointer;
+                                .commodity-list-input {
+                                    width: 220px;
+                                    height: 35px;
+                                    line-height: 35px;
+                                    color: #414141;
+                                    border: 0;
+                                    display: block;
+                                    float: left;
+                                    border: solid 1px #b4b4b4;
+                                    background: url(../../images/da_02.jpg) no-repeat right;
+                                    cursor: pointer;
+                                }
+                            }
+                            .city_help_info {
+                                width: 360px;
+                                line-height: 18px;
+                                border: 1px solid #414141;
+                                font-weight: normal;
+                                background: #fff;
+                                display: none;
+                                font-size: 12px;
+                                color: #83847e;
+                                padding: 15px;
+                                margin-top: 20px;
+                                position: absolute;
+                            }
+                            .list-color4 {
+                                height: 30px;
+                                color: #83847e;
+                                cursor: pointer;
+                                display: block;
+                                float: left;
+                            }
+                            .city_help_img {
+                                width: 15px;
+                                height: 15px;
+                                display: inline-block;
+                                position: absolute;
+                                top: 7px;
+                                right: 0;
+                            }
+                        .iscity_show {
+                                color: #414141;
+                                height: 35px;
+                                width: 95px;
+                                position: relative;
+                                cursor: pointer;
+                                float: left;
+                                .iscity_type_checkbox {
+                                    margin-top: 8px;
+                                }
+                                .city_help_img {
+                                    width: 15px;
+                                    height: 15px;
+                                    display: inline-block;
+                                    position: absolute;
+                                    top: 7px;
+                                    right: 0;
+                                }
+                            }
+                            .jnr-box {
+                                width: 188px;
+                                height: 166px;
+                                border: solid 1px #414141;
+                                position: absolute;
+                                margin-top: 0px;
+                                margin-left: 170px;
+//                              !margin-left: -170px;
+                                font-size: 12px;
+                                display: none;
+                                background-color: #fff;
+                                z-index: 1;
+                            }
+                            .mar {
+                                margin: 40px 0 0 0;
+                            }
+                        }
+                    }
+                    .leave_note {
+                        font-size: 16px;
+                        width: 100%;
+                        height: 32px;
+                        line-height: 32px;
+                        font-weight: bold;
+                        border-bottom: solid 1px #414141;
+                    }
+                    .leave_div {
+                        padding: 35px 0 15px 0;
+                        div{
+                            float: left;
+                            span {
+                                padding: 50px 30px;
+                                float: left;
+                            }
+                            label {
+                                float: left;
+                            }
+                        }
+                        div:first-child {
+                            width: 380px;
+                            border-right: 1px solid #83847e;
+                            padding: 22px 0;
+                            line-height: 25px;
+                        }
+                    }
+                    .pay_total {
+//                      line-height: 30px;
+                        font-weight: bolder;
+                        color: #414141;
+                        box-sizing: border-box;
+                        border-collapse: collapse;
+                    }
+                    .sub-tt {
+                        margin-top: 20px;
+                        margin-left: 380px;
+                        #pay_submit_btn {
+                            width: 200px;
+                            height: 40px;
+                            line-height: 40px;
+                            background: #414141;
+                            font-size: 14px;
+                            color: #fff;
+                            text-align: center;
+                            float: right;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

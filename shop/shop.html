@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../iconfont/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="../css/public.css" />
+		<link rel="stylesheet" type="text/css" href="../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../css/index.css" />
+		<link rel="stylesheet" type="text/css" href="../css/shop.css" />
+		<script type="text/javascript" src="../js/jquery-1.11.1.js"></script>
+		<script type="text/javascript" src="../js/jquery.cookie.js" ></script>
+		<script type="text/javascript" src="../js/common.js"></script>
+		<script type="text/javascript" src="../js/index.js"></script>
+		<script type="text/javascript" src="../js/shop.js" ></script>
+	</head>
+
+	<body>
+		<header>
+			<!----------------头部------------------------>
+			<div id="head">
+				<div class="head-left">
+					<ul>
+						<li>
+							<i class="iconfont icon-caidan"></i>
+							<img src="../images/index/china.svg" />
+							<span>内地</span>
+							<h2>
+								<p>
+									<img src="../images/index/hongkong.svg"/>
+									<a href="###">Hong Kong</a>
+								</p>
+								<p>
+									<img src="../images/index/china.svg"/>
+									<a href="###">内地</a>
+								</p>
+							</h2>
+						</li>
+						<li></li>
+						<li></li>
+
+					</ul>
+				</div>
+				<div class="head-right">
+					<ul>
+						<li>
+							<a href="javascript:;">登录</a>
+						</li>
+
+						<li>
+							<a href="javascript:;">注册</a>
+						</li>
+						<li>
+							<a href="javascript:;"><em class="iconfont icon-dingwei1"></em>专卖店</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<!----------------logo------------------------>
+
+		<div id="logo">
+			<h1><a href="javascript:;"><img src="../images/index/logo.jpg"/></a></h1>
+		</div>
+		<div class="nav-container">
+			<div class="main_view_line2"></div>
+		</div>
+		<div class="car_box">
+			<div class="shop-a">
+				<div class="shop-left" style="width:800px">我的购物车</div>
+				<a href="javascript:void(0);" class="shop-right" id="cart_del_all">清空购物车</a>
+			</div>
+			<table style="margin:0 auto;" class="shopping_cart" data-shopid="0" cellspacing="0" cellpadding="0" border="0">
+				<tbody>
+					<tr class="shopping_cart_title">
+						<td width="110">序号</td>
+						<td width="110">品牌</td>
+						<td width="420">商品名称</td>
+						<td width="120">单价</td>
+						<td width="13"></td>
+						<td width="60">数量</td>
+						<td width="13"></td>
+						<td>操作</td>
+					</tr>
+					<tr class="wg_cart_list" data-price="3999.0" id="cart_tr_4461" data-id="4461" style="display: none;" height="120">
+						<td>1</td>
+						<td>
+							roseonly</td>
+						<td>
+							<img src="http://www.roseonly.com.cn/upload/products/15137394213588152.png" class="shopping_cart_img" alt="产品图" style="cursor:pointer;" onclick="window.open('http://www.roseonly.com.cn/item/4461.html')">
+							<div class="shopping_cart_name">
+								爱在满怀-经典-特别款-夏加尔定制版-手捧</div>
+						</td>
+						<td class="td_price_4461">￥3999.0</td>
+						<td>
+							<a href="javascript:void(0)" class="cart_down"><img class="jia_jian" alt="" src="http://orders.roseonly.com.cn/resources/images/cart02.png" border="0"></a>
+						</td>
+						<td>
+							<input value="1" id="cart_count_4461" data-num="1" class="shopping_cart_sl" type="text">
+						</td>
+						<td align="right">
+							<a href="javascript:void(0);" class="cart_up"><img class="jia_jian" alt="" src="http://orders.roseonly.com.cn/resources/images/cart03.png" border="0"></a>
+						</td>
+						<td>
+							<a href="javascript:void(0)" class="cart_del">删除</a>
+						</td>
+					</tr>
+					<!-- 显示赠品 -->
+				</tbody>
+			</table>
+			<!--<ul class="goodInfo" data-good-id="sp1">
+				<li>1</li>
+				<li>品牌</li>
+				<li><img style="width:100px;height:100px" src="../images/detail/de1.png" /></li>
+				<li>
+					<apan>爱在满怀-经典-特别款-夏加尔定制版-手捧</apan>
+				</li>
+				<li>￥1314.0</li>
+				<li class="num">
+					<a href="javascript:;" class="minus">-</a>
+					<input type="text" name="" id="" value="2" />
+					<a href="javascript:;" class="plus">+</a>
+				</li>
+				<li>
+					<a href="javascript:;" class="del">删除</a>
+				</li>
+			</ul>-->
+			<div class="shop_box">
+				
+			</div>
+			<div class="cart_total">合计：￥
+				<font id="cart_total">1314.0</font>
+				<input class="cart_button1" value="去结算" id="cart_pay" type="button">
+			</div>
+		</div>
+
+		<div class="bottom_nav">
+			<div class="nav_div nav_01">
+				<p>全场包邮</p><span class="f14 f_wg_box">特殊礼品除外</span></div>
+			<div class="nav_div nav_02">
+				<p>全场包邮</p><span class="f14 f_wg_box">特殊礼品除外</span></div>
+			<div class="nav_div nav_03">
+				<p>全场包邮</p><span class="f14 f_wg_box">特殊礼品除外</span></div>
+			<div class="nav_div nav_04">
+				<p>全场包邮</p><span class="f14 f_wg_box">特殊礼品除外</span></div>
+		</div>
+		<div class="footer_box">
+			<div class="new_l mr50">
+				<a href="javascript:;"><img src="../images/index/roseonly.png" /></a>
+				<a style="line-height:80px">关注我们</a>
+				<a href="javascript:;"><img src="images/index/img2.png" alt="">
+				</a>
+				<a style="position: relative; top:-26px;left:52px;" href="javascript:;"><img src="images/index/img4.png" alt="">
+				</a>
+			</div>
+			<ul>
+				<p>新手指南</p>
+				<li>
+					<a href="http://www.roseonly.com.cn/about/gouwuliucheng.html " target="_blank ">购物流程</a>
+				</li>
+				<li>
+					<a href="http://www.roseonly.com.cn/about/zhifufangshi.html " target="_blank ">会员尊享</a>
+				</li>
+				<li>
+					<a href="http://www.roseonly.com.cn/about/changjianwenti.html " target="_blank ">常见问题</a>
+				</li>
+				<li>
+					<a href="http://www.roseonly.com.cn/about/zhiquanceliang.html " target="_blank ">指圈测量</a>
+				</li>
+			</ul>
+			<ul>
+				<p>售后服务</p>
+				<li>
+					<a href="http://www.roseonly.com.cn/about/tuihuantiaoli.html " target="_blank ">退款说明</a>
+				</li>
+				<li>
+					<a href="http://www.roseonly.com.cn/about/huhuatiaoli.html " target="_blank ">保养物语</a>
+				</li>
+			</ul>
+			<ul>
+				<p>物流配送</p>
+				<li>
+					<a href="http://www.roseonly.com.cn/about/peisongfangshi.html " target="_blank ">配送方式</a>
+				</li>
+				<li>
+					<a href="http://www.roseonly.com.cn/about/peisongfuwu.html " target="_blank ">配送服务</a>
+				</li>
+			</ul>
+			<ul style="background:none ">
+				<p>关于我们</p>
+				<li>
+					<a href="http://www.roseonly.com.cn/about/pinpaijieshao.html " target="_blank ">品牌介绍</a>
+				</li>
+				<li>
+					<a href="http://www.roseonly.com.cn/about/xiaoshouqudao.html " target="_blank ">销售渠道</a>
+				</li>
+				<li>
+					<a href="http://www.roseonly.com.cn/about/guanyuwomen.html " target="_blank ">联系我们</a>
+				</li>
+				<li>
+					<a href="http://www.roseonly.com.cn/about/jiaruwomen.html " target="_blank ">加入我们</a>
+				</li>
+			</ul>
+			<div class="new_r ">
+				<a><img src="http://www.roseonly.com.cn/upload/syspic_new/15137536805121092.jpg " style="width:122px " alt=" "></a>
+				<p>微信关注roseonly</p>
+			</div>
+
+		</div>
+		<div class="fot">
+			<div class="fot_01 list_06">
+				<img src="../images/index/er.svg" />
+				<img style="width:100px;height:100px;position: relative;left:-92px;top:-68px;display: none;" src="../images/index/er.png" />
+			</div>
+			<div class="fot_01 list_05">
+				<img class="t1" src="../images/index/call.svg" />
+				<div class="tel_icon">
+					<p class="tel_txt iconfont icon-iconfontphone">联系电话</p>
+					<p class="tel_phone">400-1314-520</p>
+					<div class="zxkf_txt">
+						<a href="http://www.sobot.com/chat/pc/index.html?sysNum=1fe87079144a4587872a516c25aabd86">在线客服</a>
+					</div>
+					<img style="width:9px; height:11px;position: relative;top:-44px;right:-82px" src="../images/index/sanjiao.png" />
+				</div>
+			</div>
+			<div style="display: none;" class="fot_01 list_07">
+				<img class="t2" src="../images/index/321.svg" />
+			</div>
+		</div>
+		<div class="foot-nav">
+			京ICP备13007738号 京公网安备11010502023922 www.roseonly.com.cn；诺誓（北京）商业股份有限公司
+		</div>
+	</body>
+
+</html>

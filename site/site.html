@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../iconfont/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="../css/public.css" />
+		<link rel="stylesheet" type="text/css" href="../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../css/index.css" />
+		<link rel="stylesheet" type="text/css" href="../css/site.css" />
+		<link rel="stylesheet" type="text/css" href="../css/date.css"/>
+		<script type="text/javascript" src="../js/jquery-1.11.1.js"></script>
+		<script type="text/javascript" src="../js/common.js"></script>
+		<script type="text/javascript" src="../js/index.js"></script>
+		<script type="text/javascript" src="../js/site.js" ></script>
+	</head>
+
+	<body>
+		<header>
+			<!----------------头部------------------------>
+			<div id="head">
+				<div class="head-left">
+					<ul>
+						<li>
+							<i class="iconfont icon-caidan"></i>
+							<img src="../images/index/china.svg" />
+							<span>内地</span>
+							<h2>
+								<p>
+									<img src="../images/index/hongkong.svg"/>
+									<a href="###">Hong Kong</a>
+								</p>
+								<p>
+									<img src="../images/index/china.svg"/>
+									<a href="###">内地</a>
+								</p>
+							</h2>
+						</li>
+						<li></li>
+						<li></li>
+
+					</ul>
+				</div>
+				<div class="head-right">
+					<ul>
+						<li>
+							<a href="javascript:;">登录</a>
+						</li>
+				
+				<li>
+							<a href="javascript:;">注册</a>
+						</li>
+						<li>
+							<a href="javascript:;"><i class="iconfont icon-gouwuche"></i><span>(0)</span></a>
+						</li>
+						<li>
+							<a href="javascript:;"><em class="iconfont icon-dingwei1"></em>专卖店</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<!----------------logo------------------------>
+
+		<div id="logo">
+			<h1><a href="javascript:;"><img src="../images/index/logo.jpg"/></a></h1>
+		</div>
+
+		<!--
+        	作者：ln960523@163.com
+        	时间：2017-12-29
+        	描述：地址填写
+        -->
+		<div id="con">
+			<div class="container">
+				<div>
+					<div class="nav-container">
+						<div class="main_view_line2"></div>
+					</div>
+				</div>
+				<div class="shopping">
+					<div class="order-nav">填写核对订单信息</div>
+					<div class="order-left">
+						<!--收货人信息 start-->
+						<div id="address_mylist_1">
+							<div id="address_mylist_2" style="display: none;"></div>
+							<div class="order-per" id="address_mylist">
+								<div class="per-nav">收货人信息</div>
+								<span id="span_mylove" style="display: none">刘博</span>
+								<span id="address_len" style="display: none">0</span><span id="address_select_id" style="display: none"></span>
+								<table class="mb10" cellspacing="0" cellpadding="0" border="0">
+
+									<tbody>
+										<tr id="address_add_0">
+											<div style="line-height: 30px;" id="lb">
+												<p></p>
+											</div>
+											<td width="30"><input name="address_ids" value="0" id="address_id_0" onclick="fun_showAddr();" autocomplete="off" style="display:none;" title="点击添加新地址" type="radio"></td>
+											<td class="cor-2"><label for="address_id_0" title="点击添加新地址">点击添加新地址</label></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<!--收货人信息 end-->
+
+						<!--修改信息 start-->
+						<input id="addressid" name="id" value="" type="hidden">
+						<div id="consignee_addr" class="hide" style="display: block;">
+							<div class="address-box address_zip_div_class" id="address_zip_div" style="display: none;">
+								<ul id="address_zip_ui">
+								</ul>
+							</div>
+							<table style="height:330px" class="sss" width="100%" height="150" cellspacing="0" border="0">
+								<tbody>
+									<tr height="55">
+										<td width="90" align="left"><span class="red">*</span>收 货 人 ：</td>
+										<td class="cor-2" width="220" align="left">
+											<input id="contactname" name="contactname" value="" class="contactname_input" maxlength="11" type="text">
+										</td>
+										<td width="150"></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td align="left"><span class="red">*</span>手机号码：</td>
+										<td class="cor-2" align="left">
+											<input id="mobile" class="contactname_input" maxlength="11" name="mobile" type="text">
+										</td>
+									</tr>
+									<tr>
+										<td align="left"><span class="red">*</span>省　　份：</td>
+										<td colspan="3" class="cor-2" align="left">
+											<span id="consignee_arae">
+									<select name="" id="prov">
+			<option style="background-color: #fff;width: 145px;height: 35px; border: solid 1px #b4b4b4;"   value="">请选择省</option>
+		</select>
+		<select style="background-color: #fff;width: 145px;height: 35px; border: solid 1px #b4b4b4;" name="" id="city">
+			<option value="">请选择市</option>
+		</select>
+		<select style="background-color: #fff;width: 145px;height: 35px; border: solid 1px #b4b4b4;"  name="" id="county">
+			<option value="">请选择县</option>
+		</select>
+								</span>
+										</td>
+									</tr>
+									<tr>
+										<td align="left"><span class="red">*</span>地　　址：</td>
+										<td colspan="3" class="cor-2" align="left">
+											<span id="consigneeShow_addressName"></span>
+											<input id="address" name="address" class="contactname_input2" maxlength="50" value="" type="text">
+										</td>
+									</tr>
+
+									<tr>
+										<td align="left"><span class="red">*</span>邮　　编：</td>
+										<td class="cor-2" align="left">
+											<input id="zip" name="zip" class="contactname_input" maxlength="6" value="" type="text">
+										</td>
+										<td colspan="2" class="black">&nbsp;&nbsp;请您使用准确邮编以便于您准时收货。</td>
+									</tr>
+								</tbody>
+							</table>
+							<a href="javascript:void(0)"  class="save">保存</a>
+							<a href="javascript:void(0)" onclick="javascript:$('#consignee_addr').hide()" class="cancel">取消</a>
+						</div>
+						<div class="clear"></div>
+						<!--修改信息 end-->
+
+						<!--配送信息 start-->
+						<div class="order-del">
+							<div id="address_paytype">
+								<div class="per-nav">
+									配送及支付方式
+									<div class="btn_update" style="display:none;">
+										<a href="javascript:$('#ab').show();$('#bc').hide();$('#span_ziti').show();" id="shop_pay_type_update">【修 改】</a>
+									</div>
+								</div>
+								<table id="bc" style="display: none;" cellspacing="0" cellpadding="0" border="0">
+									<tbody>
+										<tr>
+											<td class="cor-1" width="70">支付方式:</td>
+											<td class="cor-2" id="pay_type" width="80">在线支付</td>
+										</tr>
+										<tr>
+											<td class="cor-1">配送方式:</td>
+											<td class="cor-2" id="gettype_show">快递运输</td>
+											<td class="cor-2" data-id="city_kuaidi_price">
+												<span style="color:#d80000;">
+										
+									</span>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div style="" id="ab">
+								<div>
+									<div class="payment">支付方式:</div>
+									在线支付
+								</div>
+								<div id="online" style="display: none;">
+									<img src="http://orders.roseonly.com.cn/resources/images/banks.jpg">
+								</div>
+								<div class="h30">
+									<div class="cor-2 wwf">
+										<span class="w60">配送方式:</span>
+										<input id="gettype" checked="checked" name="gettype" onclick="fun_select_ordertype('0')" value="0" type="radio">
+										<label id="label_gettype_910" class="ml2" for="gettype">
+										快递运输 </label>
+									</div>
+									<div class="pay_ysf">
+										我们将用最快的速度发货（运输费：￥<span id="span_city_kuaidi_price">0.00</span>元）
+										<span style="color:#d80000;">
+									<!--(免运费）-->
+								</span>
+									</div>
+								</div>
+								<div class="h30" id="span_ziti">
+									<div class="cor-2 wfm">
+
+										<input id="gettypezt" name="gettype" onclick="fun_select_ordertype('1')" value="1" type="radio">
+										<input id="txt_onlyziti" value="" type="hidden">
+										<label id="label_gettype_910" class="ml2" for="gettypezt">实体店自提 </label>
+
+									</div>
+									<div class="pay_ysf"></div>
+
+									<span id="address_shop_len" style="display: none">42</span><span id="address_select_shop_id" style="display: none">40329</span><span id="card_shop_id" style="display: none"></span><span id="address_select_areaid_40329" style="display: none">65</span><span id="shop_address_40329" style="display: none">1</span><span id="address_select_areaid_40431" style="display: none">1585</span><span id="shop_address_40431" style="display: none">4</span><span id="address_select_areaid_43886" style="display: none">62</span><span id="shop_address_43886" style="display: none">5</span><span id="address_select_areaid_52668" style="display: none">65</span><span id="shop_address_52668" style="display: none">6</span><span id="address_select_areaid_60967" style="display: none">1336</span><span id="shop_address_60967" style="display: none">7</span><span id="address_select_areaid_68306" style="display: none">1810</span><span id="shop_address_68306" style="display: none">8</span><span id="address_select_areaid_70072" style="display: none">68</span><span id="shop_address_70072" style="display: none">9</span><span id="address_select_areaid_71237" style="display: none">1573</span><span id="shop_address_71237" style="display: none">10</span><span id="address_select_areaid_71719" style="display: none">1865</span><span id="shop_address_71719" style="display: none">11</span><span id="address_select_areaid_72589" style="display: none">1669</span><span id="shop_address_72589" style="display: none">13</span><span id="address_select_areaid_80750" style="display: none">1614</span><span id="shop_address_80750" style="display: none">17</span><span id="address_select_areaid_101764" style="display: none">1253</span><span id="shop_address_101764" style="display: none">18</span><span id="address_select_areaid_104079" style="display: none">1901</span><span id="shop_address_104079" style="display: none">19</span><span id="address_select_areaid_101765" style="display: none">1963</span><span id="shop_address_101765" style="display: none">20</span><span id="address_select_areaid_116395" style="display: none">1503</span><span id="shop_address_116395" style="display: none">22</span><span id="address_select_areaid_118417" style="display: none">1585</span><span id="shop_address_118417" style="display: none">25</span><span id="address_select_areaid_118600" style="display: none">65</span><span id="shop_address_118600" style="display: none">28</span><span id="address_select_areaid_118601" style="display: none">65</span><span id="shop_address_118601" style="display: none">31</span><span id="address_select_areaid_123163" style="display: none">1226</span><span id="shop_address_123163" style="display: none">34</span><span id="address_select_areaid_139218" style="display: none">1076</span><span id="shop_address_139218" style="display: none">36</span><span id="address_select_areaid_153595" style="display: none">1892</span><span id="shop_address_153595" style="display: none">41</span><span id="address_select_areaid_155354" style="display: none">1875</span><span id="shop_address_155354" style="display: none">42</span><span id="address_select_areaid_160067" style="display: none">1382</span><span id="shop_address_160067" style="display: none">43</span><span id="address_select_areaid_166360" style="display: none">1166</span><span id="shop_address_166360" style="display: none">44</span><span id="address_select_areaid_181117" style="display: none">1663</span><span id="shop_address_181117" style="display: none">47</span><span id="address_select_areaid_182740" style="display: none">1181</span><span id="shop_address_182740" style="display: none">48</span><span id="address_select_areaid_185500" style="display: none">1973</span><span id="shop_address_185500" style="display: none">49</span><span id="address_select_areaid_199327" style="display: none">4793</span><span id="shop_address_199327" style="display: none">52</span><span id="address_select_areaid_199734" style="display: none">1812</span><span id="shop_address_199734" style="display: none">53</span><span id="address_select_areaid_199735" style="display: none">1587</span><span id="shop_address_199735" style="display: none">54</span><span id="address_select_areaid_199736" style="display: none">1423</span><span id="shop_address_199736" style="display: none">55</span><span id="address_select_areaid_199737" style="display: none">1335</span><span id="shop_address_199737" style="display: none">56</span><span id="address_select_areaid_199738" style="display: none">1154</span><span id="shop_address_199738" style="display: none">57</span><span id="address_select_areaid_209654" style="display: none">1617</span><span id="shop_address_209654" style="display: none">58</span><span id="address_select_areaid_209655" style="display: none">1865</span><span id="shop_address_209655" style="display: none">59</span><span id="address_select_areaid_209656" style="display: none">1575</span><span id="shop_address_209656" style="display: none">60</span><span id="address_select_areaid_209658" style="display: none">1812</span><span id="shop_address_209658" style="display: none">63</span><span id="address_select_areaid_216195" style="display: none">65</span><span id="shop_address_216195" style="display: none">64</span><span id="address_select_areaid_216196" style="display: none">65</span><span id="shop_address_216196" style="display: none">65</span><span id="address_select_areaid_216197" style="display: none">1892</span><span id="shop_address_216197" style="display: none">66</span><span id="address_select_areaid_216198" style="display: none">1253</span><span id="shop_address_216198" style="display: none">67</span><span id="address_select_areaid_216725" style="display: none">1336</span><span id="shop_address_216725" style="display: none">68</span>
+									<table id="shop_address_show" style="display: none;" cellspacing="0" cellpadding="0" border="0">
+
+										<tbody>
+											<tr id="address_shop_mymobile">
+												<td class="cor-2" colspan="2" width="730">
+													<span class="pl6">提货人手机<i></i>&nbsp;
+										<input id="adress_reg_mobile2" onkeyup="fun_address_shop_mymobile()" onchange="fun_shop_mymobile_change()" on="" maxlength="11" titles="收礼人手机" name="un" value="" title="用于查看祝福语" style="border: 1px solid rgb(131, 132, 126);" type="text"></span>
+													<span class="red" id="span_adress_reg_mobile2"></span>
+												</td>
+											</tr>
+											<tr>
+												<td class="cor-2" colspan="2" width="730">
+													<div class="shuaixuan">筛选：&nbsp;&nbsp;&nbsp; 省&nbsp;
+														<select id="ddl_privince" name="ddl_privince">
+															<option value="1">北京</option>
+															<option value="2">天津</option>
+															<option value="3">上海</option>
+															<option value="4">重庆</option>
+															<option value="5">河北省</option>
+															<option value="6">山西省</option>
+															<option value="8">辽宁省</option>
+															<option value="11">江苏省</option>
+															<option value="12">浙江省</option>
+															<option value="13">安徽省</option>
+															<option value="14">福建省</option>
+															<option value="16">山东省</option>
+															<option value="17">河南省</option>
+															<option value="18">湖北省</option>
+															<option value="19">湖南省</option>
+															<option value="20">广东省</option>
+															<option value="22">四川省</option>
+															<option value="27">陕西省</option>
+														</select>
+													</div>
+												</td>
+											</tr>
+
+											<!-- 实体店地址id -->
+											<tr id="add_40329" class="wg_listshop wg_listshop_1" style="display: table-row;">
+												<td width="30">
+													<input name="address_shop_id" id="address_id_40329" onclick="fun_showAddrs('40329', '1');" value="40329" autocomplete="off" type="radio">
+												</td>
+												<td class="cor-2" width="730">
+													<div id="div_addrid_40329" style="display:none;"><span>北京三里屯太古里店</span><span>北京</span><span>北京市</span><span>朝阳区</span><span>三里屯太古里北区地下一层 NLG-09b</span><span>100020</span></div>
+													<label for="address_id_40329" id="product_address_40329">北京三里屯太古里店<i></i>&nbsp;北京北京市朝阳区&nbsp;三里屯太古里北区地下一层 NLG-09b<label style="display:none;">邮编:100020</label>
+													<label> 手机:<span class="address_shop_mymobile"></span></label>
+													</label>
+												</td>
+											</tr>
+
+											<!-- 实体店地址id -->
+											<tr id="add_40431" class="wg_listshop wg_listshop_3" style="display: none;">
+												<td width="30">
+													<input name="address_shop_id" id="address_id_40431" onclick="fun_showAddrs('40431', '4');" value="40431" autocomplete="off" type="radio">
+												</td>
+												<td class="cor-2" width="730">
+													<div id="div_addrid_40431" style="display:none;"><span>上海新天地朗廷店</span><span>上海</span><span>上海市</span><span>黄浦区</span><span>马当路99号朗廷酒店一层</span><span>200001</span></div>
+													<label for="address_id_40431" id="product_address_40431">上海新天地朗廷店<i></i>&nbsp;上海上海市黄浦区&nbsp;马当路99号朗廷酒店一层<label style="display:none;">邮编:200001</label>
+													<label> 手机:<span class="address_shop_mymobile"></span></label>
+													</label>
+												</td>
+											</tr>
+
+											<!-- 实体店地址id -->
+											<tr id="add_43886" class="wg_listshop wg_listshop_1" style="display: table-row;">
+												<td width="30">
+													<input name="address_shop_id" id="address_id_43886" onclick="fun_showAddrs('43886', '5');" value="43886" autocomplete="off" type="radio">
+												</td>
+												<td class="cor-2" width="730">
+													<div id="div_addrid_43886" style="display:none;"><span>北京金融街购物中心店</span><span>北京</span><span>北京市</span><span>西城区</span><span>金城坊街2号金融街购物中心B1-11</span><span>100033</span></div>
+													<label for="address_id_43886" id="product_address_43886">北京金融街购物中心店<i></i>&nbsp;北京北京市西城区&nbsp;金城坊街2号金融街购物中心B1-11<label style="display:none;">邮编:100033</label>
+													<label> 手机:<span class="address_shop_mymobile"></span></label>
+													</label>
+												</td>
+											</tr>
+
+											<!-- 实体店地址id -->
+											<tr id="add_52668" class="wg_listshop wg_listshop_1" style="display: table-row;">
+												<td width="30">
+													<input name="address_shop_id" id="address_id_52668" onclick="fun_showAddrs('52668', '6');" value="52668" autocomplete="off" type="radio">
+												</td>
+												<td class="cor-2" width="730">
+													<div id="div_addrid_52668" style="display:none;"><span>北京丽思卡尔顿店</span><span>北京</span><span>北京市</span><span>朝阳区</span><span>华贸中心建国路甲83号北京丽思卡尔顿酒店大堂右侧</span><span>100025</span></div>
+													<label for="address_id_52668" id="product_address_52668">北京丽思卡尔顿店<i></i>&nbsp;北京北京市朝阳区&nbsp;华贸中心建国路甲83号北京丽思卡尔顿酒店大堂右侧<label style="display:none;">邮编:100025</label>
+													<label> 手机:<span class="address_shop_mymobile"></span></label>
+													</label>
+												</td>
+											</tr>
+
+											<!-- 实体店地址id -->
+											<tr id="add_60967" class="wg_listshop wg_listshop_12" style="display: none;">
+												<td width="30">
+													<input name="address_shop_id" id="address_id_60967" onclick="fun_showAddrs('60967', '7');" value="60967" autocomplete="off" type="radio">
+												</td>
+												<td class="cor-2" width="730">
+													<div id="div_addrid_60967" style="display:none;"><span>杭州城西银泰店</span><span>浙江省</span><span>杭州市</span><span>拱墅区</span><span>丰潭路380号杭州银泰城广场一楼1F-DZ-02</span><span>310014</span></div>
+													<label for="address_id_60967" id="product_address_60967">杭州城西银泰店<i></i>&nbsp;浙江省杭州市拱墅区&nbsp;丰潭路380号杭州银泰城广场一楼1F-DZ-02<label style="display:none;">邮编:310014</label>
+													<label> 手机:<span class="address_shop_mymobile"></span></label>
+													</label>
+												</td>
+											</tr>
+
+											<!-- 实体店地址id -->
+											<tr id="add_68306" class="wg_listshop wg_listshop_20" style="display: none;">
+												<td width="30">
+													<input name="address_shop_id" id="address_id_68306" onclick="fun_showAddrs('68306', '8');" value="68306" autocomplete="off" type="radio">
+												</td>
+												<td class="cor-2" width="730">
+													<div id="div_addrid_68306" style="display:none;"><span>深圳万象城店</span><span>广东省</span><span>深圳市</span><span>罗湖区</span><span>宝安南路1881号 华润万象城351店铺</span><span>518001</span></div>
+													<label for="address_id_68306" id="product_address_68306">深圳万象城店<i></i>&nbsp;广东省深圳市罗湖区&nbsp;宝安南路1881号 华润万象城351店铺<label style="display:none;">邮编:518001</label>
+													<label> 手机:<span class="address_shop_mymobile"></span></label>
+													</label>
+												</td>
+											</tr>
+
+											<!-- 实体店地址id -->
+											<tr id="add_70072" class="wg_listshop wg_listshop_1" style="display: table-row;">
+												<td width="30">
+													<input name="address_shop_id" id="address_id_70072" onclick="fun_showAddrs('70072', '9');" value="70072" autocomplete="off" type="radio">
+												</td>
+												<td class="cor-2" width="730">
+													<div id="div_addrid_70072" style="display:none;"><span>北京新中关店</span><span>北京</span><span>北京市</span><span>海淀区</span><span>中关村大街19号新中关大厦一层L119a号商铺</span><span>100080</span></div>
+													<label for="address_id_70072" id="product_address_70072">北京新中关店<i></i>&nbsp;北京北京市海淀区&nbsp;中关村大街19号新中关大厦一层L119a号商铺<label style="display:none;">邮编:100080</label>
+													<label> 手机:<span class="address_shop_mymobile"></span></label>
+													</label>
+												</td>
+											</tr>
+
+											<!-- 实体店地址id -->
+											<tr id="add_71237" class="wg_listshop wg_listshop_2" style="display: none;">
+												<td width="30">
+													<input name="address_shop_id" id="address_id_71237" onclick="fun_showAddrs('71237', '10');" value="71237" autocomplete="off" type="radio">
+												</td>
+												<td class="cor-2" width="730">
+													<div id="div_addrid_71237" style="display:none;"><span>天津恒隆广场店</span><span>天津</span><span>天津市</span><span>和平区</span><span>兴安路166号 1047店铺</span><span>300020  </span></div>
+													<label for="address_id_71237" id="product_address_71237">天津恒隆广场店<i></i>&nbsp;天津天津市和平区&nbsp;兴安路166号 1047店铺<label style="display:none;">邮编:300020  </label>
+													<label> 手机:<span class="address_shop_mymobile"></span></label>
+													</label>
+												</td>
+											</tr>
+
+											<!-- 实体店地址id -->
+											<tr id="add_71719" class="wg_listshop wg_listshop_20" style="display: none;">
+												<td width="30">
+													<input name="address_shop_id" id="address_id_71719" onclick="fun_showAddrs('71719', '11');" value="71719" autocomplete="off" type="radio">
+												</td>
+												<td class="cor-2" width="730">
+													<div id="div_addrid_71719" style="display:none;"><span>广州太古汇店</span><span>广东省</span><span>广州市</span><span>天河区</span><span>天河路383号太古汇商场M08铺</span><span>510620</span></div>
+													<label for="address_id_71719" id="product_address_71719">广州太古汇店<i></i>&nbsp;广东省广州市天河区&nbsp;天河路383号太古汇商场M08铺<label style="display:none;">邮编:510620</label>
+													<label> 手机:<span class="address_shop_mymobile"></span></label>
+													</label>
+												</td>
+											</tr>
+
+											<!-- 实体店地址id -->
+											<tr id="add_72589" class="wg_listshop wg_listshop_22" style="display: none;">
+												<td width="30">
+													<input name="address_shop_id" id="address_id_72589" onclick="fun_showAddrs('72589', '13');" value="72589" autocomplete="off" type="radio">
+												</td>
+												<td class="cor-2" width="730">
+													<div id="div_addrid_72589" style="display:none;"><span>成都国金中心IFS店</span><span>四川省</span><span>成都市</span><span>锦江区</span><span>红星路三段1号L306</span><span>610000</span></div>
+													<label for="address_id_72589" id="product_address_72589">成都国金中心IFS店<i></i>&nbsp;四川省成都市锦江区&nbsp;红星路三段1号L306<label style="display:none;">邮编:610000</label>
+													<label> 手机:<span class="address_shop_mymobile"></span></label>
+													</label>
+												</td>
+											</tr>
+
+											<!-- 实体店地址id -->
+											<tr id="add_80750" class="wg_listshop wg_listshop_4" style="display: none;">
+												<td width="30">
+													<input name="address_shop_id" id="address_id_80750" onclick="fun_showAddrs('80750', '17');" value="80750" autocomplete="off" type="radio">
+												</td>
+												<td class="cor-2" width="730">
+													<div id="div_addrid_80750" style="display:none;"><span>重庆星光68店</span><span>重庆</span><span>重庆市</span><span>江北区</span><span>洋河一路68号  L136</span><span>400000</span></div>
+													<label for="address_id_80750" id="product_address_80750">重庆星光68店<i></i>&nbsp;重庆重庆市江北区&nbsp;洋河一路68号  L136<label style="display:none;">邮编:400000</label>
+													<label> 手机:<span class="address_shop_mymobile"></span></label>
+													</label>
+												</td>
+											</tr>
+
+											<!-- 实体店地址id -->
+											<tr id="add_101764" class="wg_listshop wg_listshop_11" style="display: none;">
+												<td width="30">
+													<input name="address_shop_id" id="address_id_101764" onclick="fun_showAddrs('101764', '18');" value="101764" autocomplete="off" type="radio">
+												</td>
+												<td class="cor-2" width="730">
+													<div id="div_addrid_101764" style="display:none;"><span>苏州美罗新区店</span><span>江苏省</span><span>苏州市</span><span>虎丘区</span><span>长江路211号 美罗新区店1011号</span><span>215000</span></div>
+													<label for="address_id_101764" id="product_address_101764">苏州美罗新区店<i></i>&nbsp;江苏省苏州市虎丘区&nbsp;长江路211号 美罗新区店1011号<label style="display:none;">邮编:215000</label>
+													<label> 手机:<span class="address_shop_mymobile"></span></label>
+													</label>
+												</td>
+											</tr>
+
+											<!-- 实体店地址id -->
+											<tr id="add_104079" class="wg_listshop wg_listshop_17" style="display: none;">
+												<td width="30">
+													<input name="address_shop_id" id="address_id_104079" onclick="fun_showAddrs('104079', '19');" value="104079" autocomplete="off" type="radio">
+												</td>
+												<td class="cor-2" width="730">
+													<div id="div_addrid_104079" style="display:none;"><span>郑州丹尼斯大卫城店</span><span>河南省</span><span>郑州市</span><span>金水区</span><span>北二七路与太康路交汇处 丹尼斯大卫城 1F-B032</span><span>450000</span></div>
+													<label for="address_id_104079" id="product_address_104079">郑州丹尼斯大卫城店<i></i>&nbsp;河南省郑州市金水区&nbsp;北二七路与太康路交汇处 丹尼斯大卫城 1F-B032<label style="display:none;">邮编:450000</label>
+													<label> 手机:<span class="address_shop_mymobile"></span></label>
+													</label>
+												</td>
+											</tr>
+
+											<!-- 实体店地址id -->
+											<tr id="add_101765" class="wg_listshop wg_listshop_16" style="display: none;">
+												<td width="30">
+													<input name="address_shop_id" id="address_id_101765" onclick="fun_showAddrs('101765', '20');" value="101765" autocomplete="off" type="radio">
+												</td>
+												<td class="cor-2" width="730">
+													<div id="div_addrid_101765" style="display:none;"><span>青岛万象城店</span><span>山东省</span><span>青岛市</span><span>市南区</span><span>山东路6号甲 华润中心万象城G-132号</span><span>266000</span></div>
+													<label for="address_id_101765" id="product_address_101765">青岛万象城店<i></i>&nbsp;山东省青岛市市南区&nbsp;山东路6号甲 华润中心万象城G-132号<label style="display:none;">邮编:266000</label>
+													<label> 手机:<span class="address_shop_mymobile"></span></label>
+													</label>
+												</td>
+											</tr>
+
+											<!-- 实体店地址id -->
+											<tr id="add_116395" class="wg_listshop wg_listshop_14" style="display: none;">
+												<td width="30">
+													<input name="address_shop_id" id="address_id_116395" onclick="fun_showAddrs('116395', '22');" value="116395" autocomplete="off" type="radio">
+												</td>
+												<td class="cor-2" width="730">
+													<div id="div_addrid_116395" style="display:none;"><span>厦门磐基中心店</span><span>福建省</span><span>厦门市</span><span>思明区</span><span>思明区嘉禾路 199 号磐基中心之名品中心 G 层14B号商铺</span><span>361000</span></div>
+													<label for="address_id_116395" id="product_address_116395">厦门磐基中心店<i></i>&nbsp;福建省厦门市思明区&nbsp;思明区嘉禾路 199 号磐基中心之名品中心 G 层14B号商铺<label style="display:none;">邮编:361000</label>
+													<label> 手机:<span class="address_shop_mymobile"></span></label>
+													</label>
+												</td>
+											</tr>
+
+											<!-- 实体店地址id -->
+											<tr id="add_118417" class="wg_listshop wg_listshop_3" style="display: none;">
+												<td width="30">
+													<input name="address_shop_id" id="address_id_118417" onclick="fun_showAddrs('118417', '25');" value="118417" autocomplete="off" type="radio">
+												</td>
+												<td class="cor-2" width="730">
+													<div id="div_addrid_118417" style="display:none;"><span>上海嘉里中心店</span><span>上海</span><span>上海市</span><span>黄浦区</span><span>南京西路1563号静安嘉里中心商场NB1-21B室</span><span>200040</span></div>
+													<label for="address_id_118417" id="product_address_118417">上海嘉里中心店<i></i>&nbsp;上海上海市黄浦区&nbsp;南京西路1563号静安嘉里中心商场NB1-21B室<label style="display:none;">邮编:200040</label>
+													<label> 手机:<span class="address_shop_mymobile"></span></label>
+													</label>
+												</td>
+											</tr>
+
+											<!-- 实体店地址id -->
+											<tr id="add_118600" class="wg_listshop wg_listshop_1" style="display: table-row;">
+												<td width="30">
+													<input name="address_shop_id" id="address_id_118600" onclick="fun_showAddrs('118600', '28');" value="118600" autocomplete="off" type="radio">
+												</td>
+												<td class="cor-2" width="730">
+													<div id="div_addrid_118600" style="display:none;"><span>北京SKP店</span><span>北京</span><span>北京市</span><span>朝阳区</span><span>建国路87号 SKP一层D1036号</span><span>100022</span></div>
+													<label for="address_id_118600" id="product_address_118600">北京SKP店<i></i>&nbsp;北京北京市朝阳区&nbsp;建国路87号 SKP一层D1036号<label style="display:none;">邮编:100022</label>
+													<label> 手机:<span class="address_shop_mymobile"></span></label>
+													</label>
+												</td>
+											</tr>
+
+											<!-- 实体店地址id -->
+											<tr id="add_118601" class="wg_listshop wg_listshop_1" style="display: table-row;">
+												<td width="30">
+													<input name="address_shop_id" id="address_id_118601" onclick="fun_showAddrs('118601', '31');" value="118601" autocomplete="off" type="radio">
+												</td>
+												<td class="cor-2" width="730">
+													<div id="div_addrid_118601" style="display:none;"><span>北京国贸商城店</span><span>北京</span><span>北京市</span><span>朝阳区</span><span>建国门外大街1号国贸2期地下一层NB136</span><span>100020</span></div>
+													<label for="address_id_118601" id="product_address_118601">北京国贸商城店<i></i>&nbsp;北京北京市朝阳区&nbsp;建国门外大街1号国贸2期地下一层NB136<label style="display:none;">邮编:100020</label>
+													<label> 手机:<span class="address_shop_mymobile"></span></label>
+													</label>
+												</td>
+											</tr>
+
+											<!-- 实体店地址id -->
+											<tr id="add_123163" class="wg_listshop wg_listshop_11" style="display: none;">
+												<td width="30">
+													<input name="address_shop_id" id="address_id_123163" onclick="fun_showAddrs('123163', '34');" value="123163" autocomplete="off" type="radio">
+												</td>
+												<td class="cor-2" width="730">
+													<div id="div_addrid_123163" style="display:none;"><span>南京金鹰新街口店</span><span>江苏省</span><span>南京市</span><span>秦淮区</span><span>秦淮区汉中路89号南京金鹰购物中心新街口店B座L1</span><span>210008</span></div>
+													<label for="address_id_123163" id="product_address_123163">南京金鹰新街口店<i></i>&nbsp;江苏省南京市秦淮区&nbsp;秦淮区汉中路89号南京金鹰购物中心新街口店B座L1<label style="display:none;">邮编:210008</label>
+													<label> 手机:<span class="address_shop_mymobile"></span></label>
+													</label>
+												</td>
+											</tr>
+
+											<!-- 实体店地址id -->
+											<tr id="add_139218" class="wg_listshop wg_listshop_5" style="display: none;">
+												<td width="30">
+													<input name="address_shop_id" id="address_id_139218" onclick="fun_showAddrs('139218', '36');" value="139218" autocomplete="off" type="radio">
+												</td>
+												<td class="cor-2" width="730">
+													<div id="div_addrid_139218" style="display:none;"><span>石家庄北国先天下店</span><span>河北省</span><span>石家庄市</span><span>长安区</span><span>石家庄市中山东路326号北国先天下广场一层名品区H-09</span><span>050000</span></div>
+													<label for="address_id_139218" id="product_address_139218">石家庄北国先天下店<i></i>&nbsp;河北省石家庄市长安区&nbsp;石家庄市中山东路326号北国先天下广场一层名品区H-09<label style="display:none;">邮编:050000</label>
+													<label> 手机:<span class="address_shop_mymobile"></span></label>
+													</label>
+												</td>
+											</tr>
+
+											<!-- 实体店地址id -->
+											<tr id="add_153595" class="wg_listshop wg_listshop_18" style="display: none;">
+												<td width="30">
+													<input name="address_shop_id" id="address_id_153595" onclick="fun_showAddrs('153595', '41');" value="153595" autocomplete="off" type="radio">
+												</td>
+												<td class="cor-2" width="730">
+													<div id="div_addrid_153595" style="display:none;"><span>武汉国际广场购物中心店</span><span>湖北省</span><span>武汉市</span><span>江汉区</span><span>湖北省武汉市解放大道690号 武汉国际广场购物中心 AG1-22</span><span>430000</span></div>
+													<label for="address_id_153595" id="product_address_153595">武汉国际广场购物中心店<i></i>&nbsp;湖北省武汉市江汉区&nbsp;湖北省武汉市解放大道690号 武汉国际广场购物中心 AG1-22<label style="display:none;">邮编:430000</label>
+													<label> 手机:<span class="address_shop_mymobile"></span></label>
+													</label>
+												</td>
+											</tr>
+
+											<!-- 实体店地址id -->
+											<tr id="add_155354" class="wg_listshop wg_listshop_19" style="display: none;">
+												<td width="30">
+													<input name="address_shop_id" id="address_id_155354" onclick="fun_showAddrs('155354', '42');" value="155354" autocomplete="off" type="radio">
+												</td>
+												<td class="cor-2" width="730">
+													<div id="div_addrid_155354" style="display:none;"><span>长沙海信广场店</span><span>湖南省</span><span>长沙市</span><span>天心区</span><span>长沙市天心区湘江中路2段36号海信广场1F111号</span><span>410000</span></div>
+													<label for="address_id_155354" id="product_address_155354">长沙海信广场店<i></i>&nbsp;湖南省长沙市天心区&nbsp;长沙市天心区湘江中路2段36号海信广场1F111号<label style="display:none;">邮编:410000</label>
+													<label> 手机:<span class="address_shop_mymobile"></span></label>
+													</label>
+												</td>
+											</tr>
+
+											<!-- 实体店地址id -->
+											<tr id="add_160067" class="wg_listshop wg_listshop_12" style="display: none;">
+												<td width="30">
+													<input name="address_shop_id" id="address_id_160067" onclick="fun_showAddrs('160067', '43');" value="160067" autocomplete="off" type="radio">
+												</td>
+												<td class="cor-2" width="730">
+													<div id="div_addrid_160067" style="display:none;"><span>温州万象城店</span><span>浙江省</span><span>温州市</span><span>瓯海区</span><span>温州市瓯海区温瑞大道999号万象城L104号</span><span>325006</span></div>
+													<label for="address_id_160067" id="product_address_160067">温州万象城店<i></i>&nbsp;浙江省温州市瓯海区&nbsp;温州市瓯海区温瑞大道999号万象城L104号<label style="display:none;">邮编:325006</label>
+													<label> 手机:<span class="address_shop_mymobile"></span></label>
+													</label>
+												</td>
+											</tr>
+
+											<!-- 实体店地址id -->
+											<tr id="add_166360" class="wg_listshop wg_listshop_8" style="display: none;">
+												<td width="30">
+													<input name="address_shop_id" id="address_id_166360" onclick="fun_showAddrs('166360', '44');" value="166360" autocomplete="off" type="radio">
+												</td>
+												<td class="cor-2" width="730">
+													<div id="div_addrid_166360" style="display:none;"><span>大连百年城店</span><span>辽宁省</span><span>大连市</span><span>中山区</span><span>大连市中山区解放路19号大连百年城一层L107</span><span>116001</span></div>
+													<label for="address_id_166360" id="product_address_166360">大连百年城店<i></i>&nbsp;辽宁省大连市中山区&nbsp;大连市中山区解放路19号大连百年城一层L107<label style="display:none;">邮编:116001</label>
+													<label> 手机:<span class="address_shop_mymobile"></span></label>
+													</label>
+												</td>
+											</tr>
+
+											<!-- 实体店地址id -->
+											<tr id="add_181117" class="wg_listshop wg_listshop_27" style="display: none;">
+												<td width="30">
+													<input name="address_shop_id" id="address_id_181117" onclick="fun_showAddrs('181117', '47');" value="181117" autocomplete="off" type="radio">
+												</td>
+												<td class="cor-2" width="730">
+													<div id="div_addrid_181117" style="display:none;"><span>西安中大国际高新店</span><span>陕西省</span><span>西安市</span><span>雁塔区</span><span>陕西省西安市高新区高新路72号中大国际L124B</span><span>710075</span></div>
+													<label for="address_id_181117" id="product_address_181117">西安中大国际高新店<i></i>&nbsp;陕西省西安市雁塔区&nbsp;陕西省西安市高新区高新路72号中大国际L124B<label style="display:none;">邮编:710075</label>
+													<label> 手机:<span class="address_shop_mymobile"></span></label>
+													</label>
+												</td>
+											</tr>
+
+											<!-- 实体店地址id -->
+											<tr id="add_182740" class="wg_listshop wg_listshop_8" style="display: none;">
+												<td width="30">
+													<input name="address_shop_id" id="address_id_182740" onclick="fun_showAddrs('182740', '48');" value="182740" autocomplete="off" type="radio">
+												</td>
+												<td class="cor-2" width="730">
+													<div id="div_addrid_182740" style="display:none;"><span>沈阳万象城店</span><span>辽宁省</span><span>沈阳市</span><span>和平区</span><span>沈阳市和平区青年大街288号沈阳华润中心万象城2层L205号</span><span>110057</span></div>
+													<label for="address_id_182740" id="product_address_182740">沈阳万象城店<i></i>&nbsp;辽宁省沈阳市和平区&nbsp;沈阳市和平区青年大街288号沈阳华润中心万象城2层L205号<label style="display:none;">邮编:110057</label>
+													<label> 手机:<span class="address_shop_mymobile"></span></label>
+													</label>
+												</td>
+											</tr>
+
+											<!-- 实体店地址id -->
+											<tr id="add_185500" class="wg_listshop wg_listshop_16" style="display: none;">
+												<td width="30">
+													<input name="address_shop_id" id="address_id_185500" onclick="fun_showAddrs('185500', '49');" value="185500" autocomplete="off" type="radio">
+												</td>
+												<td class="cor-2" width="730">
+													<div id="div_addrid_185500" style="display:none;"><span>济南恒隆广场店</span><span>山东省</span><span>济南市</span><span>历下区</span><span>济南市历下区泉城路188号济南恒隆广场商场132号</span><span>250011</span></div>
+													<label for="address_id_185500" id="product_address_185500">济南恒隆广场店<i></i>&nbsp;山东省济南市历下区&nbsp;济南市历下区泉城路188号济南恒隆广场商场132号<label style="display:none;">邮编:250011</label>
+													<label> 手机:<span class="address_shop_mymobile"></span></label>
+													</label>
+												</td>
+											</tr>
+
+											<!-- 实体店地址id -->
+											<tr id="add_199327" class="wg_listshop wg_listshop_22" style="display: none;">
+												<td width="30">
+													<input name="address_shop_id" id="address_id_199327" onclick="fun_showAddrs('199327', '52');" value="199327" autocomplete="off" type="radio">
+												</td>
+												<td class="cor-2" width="730">
+													<div id="div_addrid_199327" style="display:none;"><span>成都银泰中心in99店</span><span>四川省</span><span>成都市</span><span>高新区</span><span>成都市高新区天府大道北段1199号 成都银泰中心一层110号</span><span>610041</span></div>
+													<label for="address_id_199327" id="product_address_199327">成都银泰中心in99店<i></i>&nbsp;四川省成都市高新区&nbsp;成都市高新区天府大道北段1199号 成都银泰中心一层110号<label style="display:none;">邮编:610041</label>
+													<label> 手机:<span class="address_shop_mymobile"></span></label>
+													</label>
+												</td>
+											</tr>
+
+											<!-- 实体店地址id -->
+											<tr id="add_199734" class="wg_listshop wg_listshop_20" style="display: none;">
+												<td width="30">
+													<input name="address_shop_id" id="address_id_199734" onclick="fun_showAddrs('199734', '53');" value="199734" autocomplete="off" type="radio">
+												</td>
+												<td class="cor-2" width="730">
+													<div id="div_addrid_199734" style="display:none;"><span>深圳益田假日店</span><span>广东省</span><span>深圳市</span><span>南山区</span><span>深圳市南山区深南大道9028号益田假日广场L2-7号商铺</span><span>518000</span></div>
+													<label for="address_id_199734" id="product_address_199734">深圳益田假日店<i></i>&nbsp;广东省深圳市南山区&nbsp;深圳市南山区深南大道9028号益田假日广场L2-7号商铺<label style="display:none;">邮编:518000</label>
+													<label> 手机:<span class="address_shop_mymobile"></span></label>
+													</label>
+												</td>
+											</tr>
+
+											<!-- 实体店地址id -->
+											<tr id="add_199735" class="wg_listshop wg_listshop_3" style="display: none;">
+												<td width="30">
+													<input name="address_shop_id" id="address_id_199735" onclick="fun_showAddrs('199735', '54');" value="199735" autocomplete="off" type="radio">
+												</td>
+												<td class="cor-2" width="730">
+													<div id="div_addrid_199735" style="display:none;"><span>上海IAPM店</span><span>上海</span><span>上海市</span><span>徐汇区</span><span>上海市徐汇区淮海中路999号上海环贸广场三层（L3）321室</span><span>200001</span></div>
+													<label for="address_id_199735" id="product_address_199735">上海IAPM店<i></i>&nbsp;上海上海市徐汇区&nbsp;上海市徐汇区淮海中路999号上海环贸广场三层（L3）321室<label style="display:none;">邮编:200001</label>
+													<label> 手机:<span class="address_shop_mymobile"></span></label>
+													</label>
+												</td>
+											</tr>
+
+											<!-- 实体店地址id -->
+											<tr id="add_199736" class="wg_listshop wg_listshop_13" style="display: none;">
+												<td width="30">
+													<input name="address_shop_id" id="address_id_199736" onclick="fun_showAddrs('199736', '55');" value="199736" autocomplete="off" type="radio">
+												</td>
+												<td class="cor-2" width="730">
+													<div id="div_addrid_199736" style="display:none;"><span>合肥银泰中心店</span><span>安徽省</span><span>合肥市</span><span>庐阳区</span><span>安徽省合肥市长江中路98号合肥银泰中心1F 120柜位</span><span>230009</span></div>
+													<label for="address_id_199736" id="product_address_199736">合肥银泰中心店<i></i>&nbsp;安徽省合肥市庐阳区&nbsp;安徽省合肥市长江中路98号合肥银泰中心1F 120柜位<label style="display:none;">邮编:230009</label>
+													<label> 手机:<span class="address_shop_mymobile"></span></label>
+													</label>
+												</td>
+											</tr>
+
+											<!-- 实体店地址id -->
+											<tr id="add_199737" class="wg_listshop wg_listshop_12" style="display: none;">
+												<td width="30">
+													<input name="address_shop_id" id="address_id_199737" onclick="fun_showAddrs('199737', '56');" value="199737" autocomplete="off" type="radio">
+												</td>
+												<td class="cor-2" width="730">
+													<div id="div_addrid_199737" style="display:none;"><span>杭州万象城店</span><span>浙江省</span><span>杭州市</span><span>江干区</span><span>杭州市江干区四季青街道富春路701号杭州万象城第B1层第B171号商铺</span><span>310016</span></div>
+													<label for="address_id_199737" id="product_address_199737">杭州万象城店<i></i>&nbsp;浙江省杭州市江干区&nbsp;杭州市江干区四季青街道富春路701号杭州万象城第B1层第B171号商铺<label style="display:none;">邮编:310016</label>
+													<label> 手机:<span class="address_shop_mymobile"></span></label>
+													</label>
+												</td>
+											</tr>
+
+											<!-- 实体店地址id -->
+											<tr id="add_199738" class="wg_listshop wg_listshop_6" style="display: none;">
+												<td width="30">
+													<input name="address_shop_id" id="address_id_199738" onclick="fun_showAddrs('199738', '57');" value="199738" autocomplete="off" type="radio">
+												</td>
+												<td class="cor-2" width="730">
+													<div id="div_addrid_199738" style="display:none;"><span>太原天美新天地店</span><span>山西省</span><span>太原市</span><span>小店区</span><span>太原市小店区长风街113号一层A08区</span><span>030006</span></div>
+													<label for="address_id_199738" id="product_address_199738">太原天美新天地店<i></i>&nbsp;山西省太原市小店区&nbsp;太原市小店区长风街113号一层A08区<label style="display:none;">邮编:030006</label>
+													<label> 手机:<span class="address_shop_mymobile"></span></label>
+													</label>
+												</td>
+											</tr>
+
+											<!-- 实体店地址id -->
+											<tr id="add_209654" class="wg_listshop wg_listshop_4" style="display: none;">
+												<td width="30">
+													<input name="address_shop_id" id="address_id_209654" onclick="fun_showAddrs('209654', '58');" value="209654" autocomplete="off" type="radio">
+												</td>
+												<td class="cor-2" width="730">
+													<div id="div_addrid_209654" style="display:none;"><span>重庆新光天地店</span><span>重庆</span><span>重庆市</span><span>渝北区</span><span>重庆市渝北区红锦大道89号1层01004号</span><span>000000</span></div>
+													<label for="address_id_209654" id="product_address_209654">重庆新光天地店<i></i>&nbsp;重庆重庆市渝北区&nbsp;重庆市渝北区红锦大道89号1层01004号<label style="display:none;">邮编:000000</label>
+													<label> 手机:<span class="address_shop_mymobile"></span></label>
+													</label>
+												</td>
+											</tr>
+
+											<!-- 实体店地址id -->
+											<tr id="add_209655" class="wg_listshop wg_listshop_20" style="display: none;">
+												<td width="30">
+													<input name="address_shop_id" id="address_id_209655" onclick="fun_showAddrs('209655', '59');" value="209655" autocomplete="off" type="radio">
+												</td>
+												<td class="cor-2" width="730">
+													<div id="div_addrid_209655" style="display:none;"><span>广州正佳店</span><span>广东省</span><span>广州市</span><span>天河区</span><span>广州市天河区天河路228号正佳广场1B040号商铺 </span><span>000000</span></div>
+													<label for="address_id_209655" id="product_address_209655">广州正佳店<i></i>&nbsp;广东省广州市天河区&nbsp;广州市天河区天河路228号正佳广场1B040号商铺 <label style="display:none;">邮编:000000</label>
+													<label> 手机:<span class="address_shop_mymobile"></span></label>
+													</label>
+												</td>
+											</tr>
+
+											<!-- 实体店地址id -->
+											<tr id="add_209656" class="wg_listshop wg_listshop_2" style="display: none;">
+												<td width="30">
+													<input name="address_shop_id" id="address_id_209656" onclick="fun_showAddrs('209656', '60');" value="209656" autocomplete="off" type="radio">
+												</td>
+												<td class="cor-2" width="730">
+													<div id="div_addrid_209656" style="display:none;"><span>天津银河广场店</span><span>天津</span><span>天津市</span><span>河西区</span><span>天津市河西区乐园道9号银河国际购物中心第L2层第013-1号</span><span>000000</span></div>
+													<label for="address_id_209656" id="product_address_209656">天津银河广场店<i></i>&nbsp;天津天津市河西区&nbsp;天津市河西区乐园道9号银河国际购物中心第L2层第013-1号<label style="display:none;">邮编:000000</label>
+													<label> 手机:<span class="address_shop_mymobile"></span></label>
+													</label>
+												</td>
+											</tr>
+
+											<!-- 实体店地址id -->
+											<tr id="add_209658" class="wg_listshop wg_listshop_20" style="display: none;">
+												<td width="30">
+													<input name="address_shop_id" id="address_id_209658" onclick="fun_showAddrs('209658', '63');" value="209658" autocomplete="off" type="radio">
+												</td>
+												<td class="cor-2" width="730">
+													<div id="div_addrid_209658" style="display:none;"><span>深圳万象天地店
+</span><span>广东省</span><span>深圳市</span><span>南山区</span><span>深圳市南山区华润万象天地SL179</span><span>000000</span></div>
+													<label for="address_id_209658" id="product_address_209658">深圳万象天地店
+<i></i>&nbsp;广东省深圳市南山区&nbsp;深圳市南山区华润万象天地SL179<label style="display:none;">邮编:000000</label>
+													<label> 手机:<span class="address_shop_mymobile"></span></label>
+													</label>
+												</td>
+											</tr>
+
+											<!-- 实体店地址id -->
+											<tr id="add_216195" class="wg_listshop wg_listshop_1" style="display: table-row;">
+												<td width="30">
+													<input name="address_shop_id" id="address_id_216195" onclick="fun_showAddrs('216195', '64');" value="216195" autocomplete="off" type="radio">
+												</td>
+												<td class="cor-2" width="730">
+													<div id="div_addrid_216195" style="display:none;"><span>北京东方广场店
+</span><span>北京</span><span>北京市</span><span>朝阳区</span><span>北京市东城区东长安街1号北京东方广场首层A303商铺</span><span>100020</span></div>
+													<label for="address_id_216195" id="product_address_216195">北京东方广场店
+<i></i>&nbsp;北京北京市朝阳区&nbsp;北京市东城区东长安街1号北京东方广场首层A303商铺<label style="display:none;">邮编:100020</label>
+													<label> 手机:<span class="address_shop_mymobile"></span></label>
+													</label>
+												</td>
+											</tr>
+
+											<!-- 实体店地址id -->
+											<tr id="add_216196" class="wg_listshop wg_listshop_1" style="display: table-row;">
+												<td width="30">
+													<input name="address_shop_id" id="address_id_216196" onclick="fun_showAddrs('216196', '65');" value="216196" autocomplete="off" type="radio">
+												</td>
+												<td class="cor-2" width="730">
+													<div id="div_addrid_216196" style="display:none;"><span>北京颐堤港店
+</span><span>北京</span><span>北京市</span><span>朝阳区</span><span>北京市朝阳区酒仙桥路18号 颐堤港商场第L131号单元商铺
+</span><span>100020</span></div>
+													<label for="address_id_216196" id="product_address_216196">北京颐堤港店
+<i></i>&nbsp;北京北京市朝阳区&nbsp;北京市朝阳区酒仙桥路18号 颐堤港商场第L131号单元商铺
+<label style="display:none;">邮编:100020</label>
+													<label> 手机:<span class="address_shop_mymobile"></span></label>
+													</label>
+												</td>
+											</tr>
+
+											<!-- 实体店地址id -->
+											<tr id="add_216197" class="wg_listshop wg_listshop_18" style="display: none;">
+												<td width="30">
+													<input name="address_shop_id" id="address_id_216197" onclick="fun_showAddrs('216197', '66');" value="216197" autocomplete="off" type="radio">
+												</td>
+												<td class="cor-2" width="730">
+													<div id="div_addrid_216197" style="display:none;"><span>武汉光谷K11店</span><span>湖北省</span><span>武汉市</span><span>江汉区</span><span>武汉光谷K11购物艺术中心L1层132号商铺
+</span><span>430000</span></div>
+													<label for="address_id_216197" id="product_address_216197">武汉光谷K11店<i></i>&nbsp;湖北省武汉市江汉区&nbsp;武汉光谷K11购物艺术中心L1层132号商铺
+<label style="display:none;">邮编:430000</label>
+													<label> 手机:<span class="address_shop_mymobile"></span></label>
+													</label>
+												</td>
+											</tr>
+
+											<!-- 实体店地址id -->
+											<tr id="add_216198" class="wg_listshop wg_listshop_11" style="display: none;">
+												<td width="30">
+													<input name="address_shop_id" id="address_id_216198" onclick="fun_showAddrs('216198', '67');" value="216198" autocomplete="off" type="radio">
+												</td>
+												<td class="cor-2" width="730">
+													<div id="div_addrid_216198" style="display:none;"><span>苏州中心广场店</span><span>江苏省</span><span>苏州市</span><span>虎丘区</span><span>江苏省苏州市苏州工业园区苏州中心广场3幢L1层(B)01-11C号</span><span>215000</span></div>
+													<label for="address_id_216198" id="product_address_216198">苏州中心广场店<i></i>&nbsp;江苏省苏州市虎丘区&nbsp;江苏省苏州市苏州工业园区苏州中心广场3幢L1层(B)01-11C号<label style="display:none;">邮编:215000</label>
+													<label> 手机:<span class="address_shop_mymobile"></span></label>
+													</label>
+												</td>
+											</tr>
+
+											<!-- 实体店地址id -->
+											<tr id="add_216725" class="wg_listshop wg_listshop_12" style="display: none;">
+												<td width="30">
+													<input name="address_shop_id" id="address_id_216725" onclick="fun_showAddrs('216725', '68');" value="216725" autocomplete="off" type="radio">
+												</td>
+												<td class="cor-2" width="730">
+													<div id="div_addrid_216725" style="display:none;"><span>杭州湖滨银泰IN77D区店</span><span>浙江省</span><span>杭州市</span><span>拱墅区</span><span>浙江省杭州市上城区延安路239号 湖滨银泰in77D区一层L1-23-1</span><span>000000</span></div>
+													<label for="address_id_216725" id="product_address_216725">杭州湖滨银泰IN77D区店<i></i>&nbsp;浙江省杭州市拱墅区&nbsp;浙江省杭州市上城区延安路239号 湖滨银泰in77D区一层L1-23-1<label style="display:none;">邮编:000000</label>
+													<label> 手机:<span class="address_shop_mymobile"></span></label>
+													</label>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+
+								<span id="span_zip" class="red"></span>
+								<a onclick="fun_save_payget()" style="display:none;" class="save">保存</a>
+							</div>
+						</div>
+						<div class="clear"></div>
+						<!--配送信息 end-->
+
+						<input id="card_id" name="card_id" value="329" type="hidden">
+						<!-- 购物卡卡id -->
+
+						<form id="form" method="post" action="http://orders.roseonly.com.cn/userAddressinfo/payAddressOrder" onsubmit="return other_confirm();">
+							<input id="paytype1" name="paytype" value="922" type="hidden">
+							<!-- 付款方式 -->
+							<input id="gettype1" name="gettype" value="910" type="hidden">
+							<!-- 送货发送 -->
+							<input id="couponid" name="couponid" value="" type="hidden">
+							<!-- 代金卷 -->
+							<input id="mylove" name="mylove" value="刘博" type="hidden">
+							<input id="sendmobile" name="sendmobile" value="15011343986" type="hidden">
+							<input id="gift_ids" name="giftids" value="" type="hidden">
+							<!-- 礼品 -->
+							<input id="isbalance" name="isbalance" value="0" type="hidden">
+							<!-- 是否使用余额支付 -->
+
+							<input id="browser" name="browser" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0" type="hidden">
+							<!-- 浏览器UA -->
+
+							<input id="cardprice" name="cardprice" value="" type="hidden">
+							<!-- 购物卡卡id -->
+
+							<input id="waybilltype" name="waybilltype" value="" type="hidden">
+							<!-- 实体店订单 货运方式 -->
+							<input id="shopbuymobile" name="shopbuymobile" value="" type="hidden">
+							<!-- 实体店订单 收花人手机号码 -->
+							<input id="shopid" name="shopid" value="" type="hidden">
+							<!-- 实体店订单 实体店id -->
+							<input id="groupId" name="groupId" value="" type="hidden">
+							<!-- 组合商品ID -->
+
+							<div class="order-other">
+								<div class="per-nav">
+									<div class="fl">商品清单</div>
+								</div>
+								<span id="cart_ids" style="display: none">3072,</span><span id="arrivetypes" style="display: none">0,1,2</span><span id="gift_list"></span>
+								<table style="overflow:hidden;" width="960px" height="auto" cellspacing="0" cellpadding="0" border="0">
+
+									<input name="proid" value="3072" type="hidden">
+									<input id="addid_3072" name="addid" value="" type="hidden">
+									<!-- 订单地址id -->
+									<input id="addname_3072" name="addname" value="" type="hidden">
+									<!-- 订单地址id -->
+									<input id="iscity_3072" name="iscity" value="0" type="hidden">
+									<!-- 是否同城 -->
+
+									<input id="transport_3072" name="transport" value="0" type="hidden">
+									<!-- 陆陆运输 -->
+									<input id="arrivetype_3072" name="arrivetype" value="" type="hidden">
+									<!-- 产品发送类型 -->
+									<tbody>
+										<tr>
+											<td colspan="4">
+												<div class="commodity-list">
+													<div style="width:405px; float:left">
+														<img src="http://www.roseonly.com.cn/upload/products/14767863471937311.png" class="product-img" alt="rose" onclick="window.open('http://www.roseonly.com.cn/item/3072.html');">
+
+														<div class="commodity-list-left" data-id="3072" data-num="4" data-price="1314.0">
+															<div class="w100 fl">
+																<span class="list-color2">商品名称：</span>
+																<span class="pay_normal">摩羯座-摩羯守护色 -单朵-Mini音乐球</span>
+															</div>
+															<div class="w100 fl">
+																<span class="list-color2">商品数量：</span>
+																<span class="list-color2" id="product_count_3072">4</span>
+															</div>
+															<div class="w100 fl">
+																<span class="list-color2">商品单价：</span>
+																<span class="list-color2">¥1314.0</span>
+															</div>
+														</div>
+
+														<!-- 组合商品  start -->
+
+														<!-- 组合商品 end -->
+
+														<div id="div_zengpin" style="position: relative; top:15px;"></div>
+
+													</div>
+													<div class="commodity-list-right">
+														<span class="list-color2 list_tlabel wg_sname">收货人：</span>
+														<span id="addname_span_3072" class="list-color2 wg_sname">
+											<span id="span_address_name_3072"></span>
+														</span>
+
+														<span id="addname_a_3072" style="display:none;">1</span>
+
+														<input name="addname_input" id="addname_input_3072" onchange="fun_onchange_name('3072')" maxlength="20" class="commodity-list-input1" style="display: none" type="text">
+														<br>
+														<span class="list-color2 list_tlabel">地址：</span><span class="list-color2 add_wj" id="span_address_3072" name="span_address"></span>
+														<span id="myaddress_3072" style="display: none"></span>
+														<span class="list-color2 list_tlabel" id="ctime_show_3072">
+										<span class="red">*</span>
+														<span class="ctime_ziti">送达日期</span>：
+														</span>
+														<span id="myctime_3072" style="display: none"></span>
+														<span id="myctime_day_3072" style="display: none"></span>
+														<div class="pay_day">
+															<input id="ctime_3072" class="commodity-list-input" name="ctime"  onmouseover="$('#notice_ctime_3072').show();" onmouseout="$('#notice_ctime_3072').hide();"  value="" type="text">
+
+														</div>
+														<div id="notice_ctime_3072" class="city_help_info mar" style="display: none;">
+															阁下：<br>&nbsp;&nbsp;&nbsp;&nbsp;请您尽量避免在周末或法定节假日将送达地点填写为收货人的工作地址。
+														</div>
+														<span class="list-color4" id="day_3072">&nbsp;
+										</span>
+														<span id="arrivetype_show_3072" style="display: none">
+										<span class="list-color2" id="arrivetype_ctime_show_3072"></span>
+														</span>
+														<!-- 同城 -->
+														<span id="iscity_show_3072" style="display: none">2</span>
+														<span id="city_price_3072" data-freight="0.0" style="display: none"></span>
+														<span id="city_span_show_3072" class="iscity_show" onmouseover="$('#city_help_3072').show();" onmouseout="$('#city_help_3072').hide();">
+										<input class="iscity_type_checkbox" id="iscity_type_3072" onclick="fun_select_iscity('3072')" type="checkbox"><label for="iscity_type_3072">同城速递</label>
+										<img src="http://orders.roseonly.com.cn/resources/images/iscity.jpg" class="city_help_img" onmouseover="$('#city_help_3072').show();" onmouseout="$('#city_help_3072').hide();">
+									</span><br>
+														<div id="city_help_3072" class="city_help_info">
+															“roseonly当日达”是roseonly全新推出的物流快递业务<br> 一、业务范围：专卖店所在城市覆盖区域； <br> 二、业务形式：
+															<br> &nbsp;&nbsp;1、当日送达：下午14点前完成支付，均可保证于当日送达；
+															<br> &nbsp;&nbsp;2、次日送达：当日完成支付，也可指定次日送达；
+															<br>
+															<!--
+										三、收费标准：100元/单；-->
+														</div>
+														<!-- 同城 -->
+														<div class="jnr-box" id="jnr_3072">
+															<div class="jnr-mine">我的纪念日</div>
+															<div class="jnr-name">
+																<span id="my_day_3072" style="display: none"></span>
+																<span id="my_day_time_3072" style="display: none"></span>
+																<ul id="select" class="my_day_ul_3072">
+																</ul>
+															</div>
+															<a href="javascript:void(0);" onclick="fun_day('3072')">
+																<div class="confirm">确定</div>
+															</a>
+															<a href="javascript:void(0);" onclick="$('#jnr_3072').hide();">
+																<div class="cancel">取消</div>
+															</a>
+														</div>
+													</div>
+
+													<!-- ceng -->
+													<table id="table_day_3072" class="table-ceng" cellspacing="0" cellpadding="0" border="0">
+													</table>
+
+													<div class="clear"></div>
+
+												</div>
+											</td>
+										</tr>
+
+									</tbody>
+								</table>
+								<div>
+									<div class="leave_note">爱的留言</div>
+									<div class="leave_div">
+										<div>送礼物前别忘了为收礼人留下你的专属真爱誓言！<br>扫码关注，下单后通过语音或文字的形式提交内容，<br>收礼人可随时查阅，感受独一无二的专属爱语。</div>
+										<div>
+											<span>第一步：关注公众号</span>
+											<label><img src="http://orders.roseonly.com.cn/resources/images/order_less_code.png"></label>
+											<span>第二步：开始留言</span>
+											<label><img src="http://orders.roseonly.com.cn/resources/images/order_less_img.png" height="110"></label>
+										</div>
+										<p class="clear"></p>
+									</div>
+								</div>
+
+								<table width="960px" height="auto" cellspacing="0" cellpadding="0" border="0">
+									<tbody>
+										<tr id="coupon_list">
+											<td colspan="4">
+												<div class="per-nav">使用优惠劵</div>
+											</td>
+										</tr>
+										<tr>
+											<td colspan="4" style="padding: 30px 0;">
+												<div id="coupon_area_select">
+													<span class="h30">优惠券号码:</span>
+													<span><input id="couponno" name="couponno" value="" ime-mode:disabled="" autocomplete="off" maxlength="20" type="text"></span>
+													<span><input id="button_btn" value="使 用" onclick="searchOrderCoupon(document.getElementById('couponno').value);" type="button">&nbsp;&nbsp;<font class="red" id="coupon_msg">&nbsp;</font></span>
+												</div>
+												<div id="coupon_area_use" style="display: none;"></div>
+											</td>
+										</tr>
+										<tr class="h30">
+											<td colspan="4" height="5">&nbsp;</td>
+										</tr>
+										<tr style="position: relative;" id="gift_list" class="pay_total">
+											<td></td>
+											<td style="border-bottom: solid 5px #414141!important;width:960px;height:1px;position: absolute;top:24px"></td>
+											<td class="red" id="gift_title"></td>
+											<td align="right">
+												<span style="display: none" id="my_total">5256.0</span>
+												<span>总计：</span>
+												<span id="totalPrices">￥5256</span>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<span id="span_bless"></span>
+								<div class="sub-tt" id="pay_submit_div">
+									<input id="pay_submit_btn" src="../images/detail/da_01.jpg" width="200" type="image" height="37">
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+
+		<div class="bottom_nav">
+			<div class="nav_div nav_01">
+				<p>全场包邮</p><span class="f14 f_wg_box">特殊礼品除外</span></div>
+			<div class="nav_div nav_02">
+				<p>全场包邮</p><span class="f14 f_wg_box">特殊礼品除外</span></div>
+			<div class="nav_div nav_03">
+				<p>全场包邮</p><span class="f14 f_wg_box">特殊礼品除外</span></div>
+			<div class="nav_div nav_04">
+				<p>全场包邮</p><span class="f14 f_wg_box">特殊礼品除外</span></div>
+		</div>
+		<div class="footer_box">
+			<div class="new_l mr50">
+				<a href="javascript:;"><img src="../images/index/roseonly.png" /></a>
+				<a style="line-height:80px">关注我们</a>
+				<a href="javascript:;"><img src="images/index/img2.png" alt="">
+				</a>
+				<a style="position: relative; top:-26px;left:52px;" href="javascript:;"><img src="images/index/img4.png" alt="">
+				</a>
+			</div>
+			<ul>
+				<p>新手指南</p>
+				<li>
+					<a href="http://www.roseonly.com.cn/about/gouwuliucheng.html " target="_blank ">购物流程</a>
+				</li>
+				<li>
+					<a href="http://www.roseonly.com.cn/about/zhifufangshi.html " target="_blank ">会员尊享</a>
+				</li>
+				<li>
+					<a href="http://www.roseonly.com.cn/about/changjianwenti.html " target="_blank ">常见问题</a>
+				</li>
+				<li>
+					<a href="http://www.roseonly.com.cn/about/zhiquanceliang.html " target="_blank ">指圈测量</a>
+				</li>
+			</ul>
+			<ul>
+				<p>售后服务</p>
+				<li>
+					<a href="http://www.roseonly.com.cn/about/tuihuantiaoli.html " target="_blank ">退款说明</a>
+				</li>
+				<li>
+					<a href="http://www.roseonly.com.cn/about/huhuatiaoli.html " target="_blank ">保养物语</a>
+				</li>
+			</ul>
+			<ul>
+				<p>物流配送</p>
+				<li>
+					<a href="http://www.roseonly.com.cn/about/peisongfangshi.html " target="_blank ">配送方式</a>
+				</li>
+				<li>
+					<a href="http://www.roseonly.com.cn/about/peisongfuwu.html " target="_blank ">配送服务</a>
+				</li>
+			</ul>
+			<ul style="background:none ">
+				<p>关于我们</p>
+				<li>
+					<a href="http://www.roseonly.com.cn/about/pinpaijieshao.html " target="_blank ">品牌介绍</a>
+				</li>
+				<li>
+					<a href="http://www.roseonly.com.cn/about/xiaoshouqudao.html " target="_blank ">销售渠道</a>
+				</li>
+				<li>
+					<a href="http://www.roseonly.com.cn/about/guanyuwomen.html " target="_blank ">联系我们</a>
+				</li>
+				<li>
+					<a href="http://www.roseonly.com.cn/about/jiaruwomen.html " target="_blank ">加入我们</a>
+				</li>
+			</ul>
+			<div class="new_r ">
+				<a><img src="http://www.roseonly.com.cn/upload/syspic_new/15137536805121092.jpg " style="width:122px " alt=" "></a>
+				<p>微信关注roseonly</p>
+			</div>
+
+		</div>
+		<div class="fot">
+			<div class="fot_01 list_06">
+				<img src="../images/index/er.svg" />
+				<img style="width:100px;height:100px;position: relative;left:-92px;top:-68px;display: none;" src="../images/index/er.png" />
+			</div>
+			<div class="fot_01 list_05">
+				<img class="t1" src="../images/index/call.svg" />
+				<div class="tel_icon">
+					<p class="tel_txt iconfont icon-iconfontphone">联系电话</p>
+					<p class="tel_phone">400-1314-520</p>
+					<div class="zxkf_txt">
+						<a href="http://www.sobot.com/chat/pc/index.html?sysNum=1fe87079144a4587872a516c25aabd86">在线客服</a>
+					</div>
+					<img style="width:9px; height:11px;position: relative;top:-44px;right:-82px" src="../images/index/sanjiao.png" />
+				</div>
+			</div>
+			<div style="display: none;" class="fot_01 list_07">
+				<img class="t2" src="../images/index/321.svg" />
+			</div>
+		</div>
+		<div class="foot-nav">
+			京ICP备13007738号 京公网安备11010502023922 www.roseonly.com.cn；诺誓（北京）商业股份有限公司
+		</div>
+	</body>
+
+</html>
+<style type="text/css">
+	.WdateDiv {
+    width: 180px;
+    background-color: #fff;
+    border: #C5E1E4 1px solid;
+    padding: 2px;
+}
+</style>
+<div class="WdateDiv"><div id="dpTitle"><div style="float: left;" class="navImg NavImgll"></div><div style="float: left;" class="navImg NavImgl"></div><div style="float:left"><div class="menuSel MMenu" style="z-index: 1; display: none;"></div><input class="yminput" tabindex="1" realvalue="1"></div><div style="float:left"><div class="menuSel YMenu" style="z-index: 1; display: none;"></div><input class="yminput" tabindex="2"></div><div style="float: right;" class="navImg NavImgrr"></div><div style="float: right;" class="navImg NavImgr"></div></div><div style="position: absolute; overflow: hidden; display: none;"></div><div><table class="WdayTable" width="100%" cellspacing="0" cellpadding="0" border="0"><tbody><tr class="MTitle" align="center"><td>日</td><td>一</td><td>二</td><td>三</td><td>四</td><td>五</td><td>六</td></tr><tr><td class="WinvalidDay" align="center">31</td><td onclick="day_Click(2018,1,1);" onmouseover="this.className='WdayOn'" onmouseout="this.className='Wselday'" class="Wselday" align="center">1</td><td onclick="day_Click(2018,1,2);" onmouseover="this.className='WdayOn'" onmouseout="this.className='Wday'" class="Wday" align="center">2</td><td onclick="day_Click(2018,1,3);" onmouseover="this.className='WdayOn'" onmouseout="this.className='Wday'" class="Wday" align="center">3</td><td onclick="day_Click(2018,1,4);" onmouseover="this.className='WdayOn'" onmouseout="this.className='Wday'" class="Wday" align="center">4</td><td onclick="day_Click(2018,1,5);" onmouseover="this.className='WdayOn'" onmouseout="this.className='Wday'" class="Wday" align="center">5</td><td onclick="day_Click(2018,1,6);" onmouseover="this.className='WwdayOn'" onmouseout="this.className='Wwday'" class="Wwday" align="center">6</td></tr><tr><td onclick="day_Click(2018,1,7);" onmouseover="this.className='WwdayOn'" onmouseout="this.className='Wwday'" class="Wwday" align="center">7</td><td onclick="day_Click(2018,1,8);" onmouseover="this.className='WdayOn'" onmouseout="this.className='Wday'" class="Wday" align="center">8</td><td onclick="day_Click(2018,1,9);" onmouseover="this.className='WdayOn'" onmouseout="this.className='Wday'" class="Wday" align="center">9</td><td onclick="day_Click(2018,1,10);" onmouseover="this.className='WdayOn'" onmouseout="this.className='Wday'" class="Wday" align="center">10</td><td onclick="day_Click(2018,1,11);" onmouseover="this.className='WdayOn'" onmouseout="this.className='Wday'" class="Wday" align="center">11</td><td onclick="day_Click(2018,1,12);" onmouseover="this.className='WdayOn'" onmouseout="this.className='Wday'" class="Wday" align="center">12</td><td onclick="day_Click(2018,1,13);" onmouseover="this.className='WwdayOn'" onmouseout="this.className='Wwday'" class="Wwday" align="center">13</td></tr><tr><td onclick="day_Click(2018,1,14);" onmouseover="this.className='WwdayOn'" onmouseout="this.className='Wwday'" class="Wwday" align="center">14</td><td onclick="day_Click(2018,1,15);" onmouseover="this.className='WdayOn'" onmouseout="this.className='Wday'" class="Wday" align="center">15</td><td onclick="day_Click(2018,1,16);" onmouseover="this.className='WdayOn'" onmouseout="this.className='Wday'" class="Wday" align="center">16</td><td onclick="day_Click(2018,1,17);" onmouseover="this.className='WdayOn'" onmouseout="this.className='Wday'" class="Wday" align="center">17</td><td onclick="day_Click(2018,1,18);" onmouseover="this.className='WdayOn'" onmouseout="this.className='Wday'" class="Wday" align="center">18</td><td onclick="day_Click(2018,1,19);" onmouseover="this.className='WdayOn'" onmouseout="this.className='Wday'" class="Wday" align="center">19</td><td onclick="day_Click(2018,1,20);" onmouseover="this.className='WwdayOn'" onmouseout="this.className='Wwday'" class="Wwday" align="center">20</td></tr><tr><td onclick="day_Click(2018,1,21);" onmouseover="this.className='WwdayOn'" onmouseout="this.className='Wwday'" class="Wwday" align="center">21</td><td onclick="day_Click(2018,1,22);" onmouseover="this.className='WdayOn'" onmouseout="this.className='Wday'" class="Wday" align="center">22</td><td onclick="day_Click(2018,1,23);" onmouseover="this.className='WdayOn'" onmouseout="this.className='Wday'" class="Wday" align="center">23</td><td onclick="day_Click(2018,1,24);" onmouseover="this.className='WdayOn'" onmouseout="this.className='Wday'" class="Wday" align="center">24</td><td onclick="day_Click(2018,1,25);" onmouseover="this.className='WdayOn'" onmouseout="this.className='Wday'" class="Wday" align="center">25</td><td onclick="day_Click(2018,1,26);" onmouseover="this.className='WdayOn'" onmouseout="this.className='Wday'" class="Wday" align="center">26</td><td onclick="day_Click(2018,1,27);" onmouseover="this.className='WwdayOn'" onmouseout="this.className='Wwday'" class="Wwday" align="center">27</td></tr><tr><td onclick="day_Click(2018,1,28);" onmouseover="this.className='WwdayOn'" onmouseout="this.className='Wwday'" class="Wwday" align="center">28</td><td onclick="day_Click(2018,1,29);" onmouseover="this.className='WdayOn'" onmouseout="this.className='Wday'" class="Wday" align="center">29</td><td onclick="day_Click(2018,1,30);" onmouseover="this.className='WdayOn'" onmouseout="this.className='Wday'" class="Wday" align="center">30</td><td onclick="day_Click(2018,1,31);" onmouseover="this.className='WdayOn'" onmouseout="this.className='Wday'" class="Wday" align="center">31</td><td onclick="day_Click(2018,2,1);" onmouseover="this.className='WotherDayOn'" onmouseout="this.className='WotherDay'" class="WotherDay" align="center">1</td><td onclick="day_Click(2018,2,2);" onmouseover="this.className='WotherDayOn'" onmouseout="this.className='WotherDay'" class="WotherDay" align="center">2</td><td onclick="day_Click(2018,2,3);" onmouseover="this.className='WotherDayOn'" onmouseout="this.className='WotherDay'" class="WotherDay" align="center">3</td></tr><tr><td onclick="day_Click(2018,2,4);" onmouseover="this.className='WotherDayOn'" onmouseout="this.className='WotherDay'" class="WotherDay" align="center">4</td><td onclick="day_Click(2018,2,5);" onmouseover="this.className='WotherDayOn'" onmouseout="this.className='WotherDay'" class="WotherDay" align="center">5</td><td onclick="day_Click(2018,2,6);" onmouseover="this.className='WotherDayOn'" onmouseout="this.className='WotherDay'" class="WotherDay" align="center">6</td><td onclick="day_Click(2018,2,7);" onmouseover="this.className='WotherDayOn'" onmouseout="this.className='WotherDay'" class="WotherDay" align="center">7</td><td onclick="day_Click(2018,2,8);" onmouseover="this.className='WotherDayOn'" onmouseout="this.className='WotherDay'" class="WotherDay" align="center">8</td><td onclick="day_Click(2018,2,9);" onmouseover="this.className='WotherDayOn'" onmouseout="this.className='WotherDay'" class="WotherDay" align="center">9</td><td onclick="day_Click(2018,2,10);" onmouseover="this.className='WotherDayOn'" onmouseout="this.className='WotherDay'" class="WotherDay" align="center">10</td></tr></tbody></table></div><div id="dpTime" style="display: none;"><div class="menuSel hhMenu" style="z-index: 1; display: none;"></div><div class="menuSel mmMenu" style="z-index: 1; display: none;"></div><div class="menuSel ssMenu" style="z-index: 1; display: none;"></div><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td rowspan="2"><span id="dpTimeStr">时间</span>&nbsp;<input class="tB" maxlength="2" tabindex="3"><input value=":" class="tm" readonly=""><input class="tE" maxlength="2" tabindex="4"><input value=":" class="tm" readonly=""><input class="tE" maxlength="2" tabindex="5"></td><td><button id="dpTimeUp"></button></td></tr><tr><td><button id="dpTimeDown"></button></td></tr></tbody></table></div><div id="dpQS"></div><div id="dpControl"><input class="dpButton" id="dpClearInput" tabindex="6" value="清空" type="button"> <input class="dpButton" id="dpTodayInput" tabindex="7" value="今天" disabled="" type="button"> <input class="dpButton" id="dpOkInput" tabindex="8" value="确定" type="button"></div></div>
