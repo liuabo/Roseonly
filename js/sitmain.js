@@ -3,12 +3,14 @@ require.config({
 	paths : {
 		"jquery" : "jquery",
 		"index" : "index",
-		"comm" : "common"
+		"comm" : "common",
+		"sit" : "site"
 	}
 })
-require(["jquery","index","comm"],function($,index,comm){
+require(["jquery","index","comm","sit"],function($,index,comm,sit){
 	$(function(){
 		index.index();
 		comm.comm();
+		sit.sit();
 	})
 })

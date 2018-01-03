@@ -124,7 +124,7 @@ header #head .head-right li:nth-of-type(3) {
 }
 header #head .head-right li:nth-of-type(3) span {
   position: relative;
-  top: -5px;
+  top: -2px;
 }
 header #head .head-right li:last-child {
   width: 80px;

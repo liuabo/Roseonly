@@ -9,11 +9,7 @@
 		<link rel="stylesheet" type="text/css" href="../css/common.css" />
 		<link rel="stylesheet" type="text/css" href="../css/index.css" />
 		<link rel="stylesheet" type="text/css" href="../css/shop.css" />
-		<script type="text/javascript" src="../js/jquery-1.11.1.js"></script>
-		<script type="text/javascript" src="../js/jquery.cookie.js" ></script>
-		<script type="text/javascript" src="../js/common.js"></script>
-		<script type="text/javascript" src="../js/index.js"></script>
-		<script type="text/javascript" src="../js/shop.js" ></script>
+		<script type="text/javascript" src="../js/require.js" defer async="true" data-main = "../js/shopmain"></script>
 	</head>
 
 	<body>
@@ -69,7 +65,7 @@
 		<div class="car_box">
 			<div class="shop-a">
 				<div class="shop-left" style="width:800px">我的购物车</div>
-				<a href="javascript:void(0);" class="shop-right" id="cart_del_all">清空购物车</a>
+				<!--<a href="javascript:void(0);" class="shop-right" id="cart_del_all">清空购物车</a>-->
 			</div>
 			<table style="margin:0 auto;" class="shopping_cart" data-shopid="0" cellspacing="0" cellpadding="0" border="0">
 				<tbody>
@@ -130,7 +126,7 @@
 				
 			</div>
 			<div class="cart_total">合计：￥
-				<font id="cart_total">1314.0</font>
+				<font id="cart_total">0.00</font>
 				<input class="cart_button1" value="去结算" id="cart_pay" type="button">
 			</div>
 		</div>
