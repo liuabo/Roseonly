@@ -27,7 +27,9 @@ define(function() {
 			function getRand(min, max) {
 				return Math.round(Math.random() * (max - min) + min);
 			}
-
+			$("#getSmsCode").click(function(){
+				$("#smscode").val(yzm())
+			})
 			//手机号
 
 			$("input").focus(function() {
@@ -91,7 +93,7 @@ define(function() {
 						var userName = $('#username').val()
 						var userId = $('#password').val()
 
-						var cookieValue = "{user:" + userName + ",userId:" + userId + "}"
+						var cookieValue = '{"user":' + userName + ',"userId":' + userId + "}"
 						var cookieKey = "user_" + id;
 						var date = new Date();
 						date.setDate(date.getDate() + 3);

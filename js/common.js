@@ -1,6 +1,12 @@
 define(function() {
 	function comm() {
 		$(function() {
+			$(".reg_04").click(function(){
+				location.href = "../log in/login.html"
+			})
+			$(".reg_05").click(function(){
+				location.href = "../log in/login.html"
+			})
 			$(window).scroll(function() {
 				let h = 120;
 				var sTop = document.body.scrollTop || document.documentElement.scrollTop;

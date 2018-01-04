@@ -175,7 +175,7 @@ define(function() {
 				var timer = null;
 				timer = setInterval(function() {
 					location.href = "../shop/shop.html";
-				}, 1000)
+				}, 200)
 			})
 
 			function convertCartStrToObj(cartStr) {

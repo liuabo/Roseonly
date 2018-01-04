@@ -229,12 +229,16 @@ define(function() {
 			var str = document.cookie.split("; ");
 			//			console.log(str)
 			for(var i = 0; i < str.length; i++) {
-				var arr = str[i].split("=");
-				//			console.log(arr);
+				var arr = str[i].split("=")
+//							console.log(arr);
 				for(var j = 0; j < arr.length; j++) {
 					if(arr[0].indexOf("user_") == 0) {
-						var json = eval("(" + arr[1] + ")")
+						var strNew = arr[1];
+//						console.log(strNew)
+						var json = JSON.parse(strNew)
+//						var json = eval(strNew)
 						var $userId = json.user
+//						alert($userId)
 						var $userPass = json.userId
 						$(".reg_01").css("width", 60).html("个人中心")
 						$(".reg_02").css("display", "none")

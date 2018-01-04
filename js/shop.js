@@ -1,6 +1,9 @@
 define(function() {
 	function shop() {
 		$(function() {
+			setTimeout(function(){
+//				window.location.reload()
+			})
 			var cartStr = $.cookie("cart") ? $.cookie("cart") : "";
 
 			if(!cartStr) {
